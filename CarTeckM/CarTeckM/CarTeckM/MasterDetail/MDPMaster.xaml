@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             x:Class="CarTeckM.MasterDetail.MDPMaster"
+             Title="Master">
+    <StackLayout >
+    <ListView x:Name="MenuItemsListView"
+              SeparatorVisibility="None"
+              HasUnevenRows="true"
+              ItemsSource="{Binding MenuItems}"
+              SeparatorColor="Black" d:SeparatorVisibility="Default">
+      <ListView.Header>
+        <Grid BackgroundColor="White" Margin="0,0,0,10">
+          <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="60"  />
+            <ColumnDefinition Width="auto" />
+            <ColumnDefinition Width="40"/>
+          </Grid.ColumnDefinitions>
+          <Grid.RowDefinitions>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="25"/>
+          </Grid.RowDefinitions>
+                    <Image Aspect="Fill" Grid.Column="0" Grid.Row="0" Source="CarTeckLogo.png" Margin="10,0,0,0" x:Name="logoApp"  VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"></Image>
+                    <Label Grid.Column="1" Grid.Row="0" Text="NameUser"  VerticalTextAlignment="Center" HorizontalTextAlignment="Center" ></Label>
+
+                    <Frame CornerRadius="60"   Grid.Column="1" Grid.Row="1"    HeightRequest="120"   BackgroundColor="Red"  Padding="0">
+                        
+                        <Image Source="NoImageAvailable.png"  BackgroundColor="Black"  x:Name="profileImage"  VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"></Image>
+
+                    </Frame>
+                    <ImageButton Grid.Column="2" Grid.Row="2"  Source="iconLogout.png" x:Name="LoginBtn" WidthRequest="20" HeightRequest="20" Padding="0" BackgroundColor="Transparent" Clicked="LoginBtn_Clicked" ></ImageButton>
+                </Grid>
+      </ListView.Header>
+      <ListView.ItemTemplate>
+        <DataTemplate>
+                    <ViewCell>
+                        <Grid Padding="15,10">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="40"/>
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <Image Source="{Binding IconSource}" VerticalOptions="Center" Margin="0" WidthRequest="30" HeightRequest="30"/>
+                            <Label Grid.Column="1" Text="{Binding Title}" VerticalTextAlignment="Center" Margin="0" FontSize="22" />
+                        </Grid>
+                    </ViewCell>
+        </DataTemplate>
+      </ListView.ItemTemplate>
+    </ListView>
+  </StackLayout>
+</ContentPage>

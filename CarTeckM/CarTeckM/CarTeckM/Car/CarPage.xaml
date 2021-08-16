@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CarTeckM.Car.CarPage"
+             xmlns:Models="clr-namespace:CarTeckM.Models"
+             x:DataType="Models:CarDto"
+              x:imagedata="DataType:Picture">
+    <ContentPage.Content>
+        <RefreshView>
+            <ScrollView>
+                <ListView x:Name="CarListElement" HasUnevenRows="True" ItemTapped="CarListElement_ItemTapped">
+                    <ListView.ItemTemplate>
+                        <DataTemplate  x:DataType="Models:CarDto">
+                            <ViewCell>
+                                <Frame BorderColor="Black" Padding="0" CornerRadius="5" Margin="20,5" >
+
+                                    <Grid HorizontalOptions="Center" Margin="0" BackgroundColor="Gray" >
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="35" ></RowDefinition>
+                                            <RowDefinition Height="170"></RowDefinition>
+                                            <RowDefinition Height="35"></RowDefinition>
+                                            <RowDefinition Height="45"></RowDefinition>
+                                        </Grid.RowDefinitions >
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition ></ColumnDefinition>
+                                        </Grid.ColumnDefinitions>
+                                        <Label Grid.Row="0" Grid.Column="0" FontSize="30" Text="{Binding Brand}" HorizontalTextAlignment="Center" BackgroundColor="Bisque"></Label>
+                                        <CarouselView x:Name="CarouselImage" Grid.Row="1" ItemsSource="{Binding Picture}" Grid.Column="0" HorizontalOptions="CenterAndExpand" >
+                                            <CarouselView.ItemTemplate>
+                                                <DataTemplate>
+                                                    <Image Source="{Binding}" ></Image>
+                                                </DataTemplate>
+                                            </CarouselView.ItemTemplate>
+                                        </CarouselView>
+                                        <Label Grid.Row="2"  Grid.Column="0" Text="{Binding Price, StringFormat='{0:c}'}" Padding="20,5,0,0"  FontSize="20" BackgroundColor="Brown"></Label>
+                                        <Grid Grid.Row="3" Grid.Column="0">
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="20"></RowDefinition>
+                                                <RowDefinition Height="20"></RowDefinition>
+                                            </Grid.RowDefinitions>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="*"></ColumnDefinition>
+                                                <ColumnDefinition Width="*"></ColumnDefinition>
+                                            </Grid.ColumnDefinitions>
+                                            <Label Grid.Row="0"  Grid.Column="0" Text="{Binding Range, StringFormat='{0} Km'}" Padding="10,0,0,0" BackgroundColor="CadetBlue"></Label>
+                                            <Label Grid.Row="0"  Grid.Column="1" Text="{Binding BuildYear, StringFormat='{0}'}" BackgroundColor="CadetBlue" Padding="10,0,0,0"></Label>
+                                            <Label Grid.Row="1"  Grid.Column="0" Text="{Binding Transmission, StringFormat='Transmission: {0}'}" BackgroundColor="CadetBlue" Padding="10,0,0,0"></Label>
+                                            <Label Grid.Row="1"  Grid.Column="1" Text="{Binding FuelType, StringFormat='Brandstof: {0}'}" BackgroundColor="CadetBlue" Padding="10,0,0,0"></Label>
+                                        </Grid>
+                                    </Grid>
+
+
+                                </Frame>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </ScrollView>
+        </RefreshView>
+        
+   
+    </ContentPage.Content>
+</ContentPage>

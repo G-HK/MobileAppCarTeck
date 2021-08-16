@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<pages:PopupPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CarTeckM.Account.Login"
+             xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup" xmlns:Aimations="http://rotorgames.com"
+             xmlns:models="clr-namespace:CarTeckM.Models"
+                 x:DataType="models:LoginDto">
+    <pages:PopupPage.Animation>
+        <Aimations:ScaleAnimation DurationIn="400"
+                                   DurationOut="300"
+                                   EasingIn="SinOut"
+                                   EasingOut="SinIn"
+                                   HasBackgroundAnimation="True"
+                                   PositionIn="Center"
+                                   PositionOut="Center"
+                                   ScaleIn="1.2"
+                                   ScaleOut="0.8"/>
+
+
+    </pages:PopupPage.Animation>
+
+    <StackLayout   BackgroundColor="White" Margin="12" HorizontalOptions="Center" VerticalOptions="Center" Spacing="24">
+
+        <StackLayout Orientation="Horizontal" BackgroundColor="Black">
+
+            <Button Text="X" HorizontalOptions="Start" FontSize="25" TextColor="Snow" x:Name="btnX" Clicked="btnX_Clicked" Background="transparent" />
+
+            <Image Source="CarTeckLogo.png" HorizontalOptions="CenterAndExpand" WidthRequest="60"/>
+
+            <Button Text="SIGN UP" x:Name="btnRegistater" Clicked="btnRegistater_Clicked" HorizontalOptions="End" BackgroundColor="Transparent" FontAttributes="Italic" TextColor="Snow"/>
+        </StackLayout>
+
+        <Label Text="Email is incorrect, Check Email again!" x:Name="InValidLbl" TextColor="Red" HorizontalTextAlignment="Center" IsVisible="false"></Label>
+        <Frame CornerRadius="50" BackgroundColor="Beige" x:Name="FrameEmail" BorderColor="Gray" Padding="10,0" Margin="15">
+            <StackLayout Orientation="Horizontal" >
+                <Image Source="iconUser20.png"  WidthRequest="30" />
+                <Entry x:Name="EmailEtry" Placeholder="{Binding Email}" Text="{Binding Email,TargetNullValue='test@user.be'}" Keyboard="Email" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand" Margin="5,0,0,0"/>
+            </StackLayout>
+        </Frame>
+
+        <Label Text="Incorrect Password, Check Password!" x:Name="alertPsw" TextColor="Red"  HorizontalTextAlignment="Center" IsVisible="false"/>
+        <Frame CornerRadius="50" BackgroundColor="Beige" x:Name="FramePsw" BorderColor="Gray"  Padding="8,0" Margin="15">
+            <StackLayout Orientation="Horizontal">
+                <Image Source="keyPsw.png" WidthRequest="30" />
+                <Entry  x:Name="PswEntry" Placeholder="Password" Text="{Binding Password, TargetNullValue='test'}" IsPassword="True"  HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand" />
+                <ImageButton Source="test.png" x:Name="IbtnEye" Clicked="IbtnEye_Clicked"  WidthRequest="22" BackgroundColor="Transparent"/>
+            </StackLayout>
+        </Frame>
+
+        <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+            <CheckBox x:Name="StayLoginCkBox"></CheckBox>
+            <Label>stay login.</Label>
+        </StackLayout>
+
+        <Button Text="Login" x:Name="btnLogin" BackgroundColor="Transparent" FontAttributes="Italic,Bold" FontSize="22" HorizontalOptions="Center" Clicked="btnLogin_Clicked" ></Button>
+
+    </StackLayout>
+
+
+</pages:PopupPage>

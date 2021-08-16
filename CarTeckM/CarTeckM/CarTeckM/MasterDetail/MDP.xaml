@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CarTeckM.MasterDetail.MDP"
+             xmlns:pages="clr-namespace:CarTeckM.MasterDetail"
+                  xmlns:Car="clr-namespace:CarTeckM.Car">
+  <MasterDetailPage.Master>
+    <pages:MDPMaster x:Name="MasterPage" />
+  </MasterDetailPage.Master>
+    
+  <MasterDetailPage.Detail>
+      
+    <NavigationPage>
+      <x:Arguments>
+        <pages:MDPDetail />
+      </x:Arguments>
+
+            <!--<TabbedPage>
+                <TabbedPage.Children>
+                    <Car:CarPage Title="Info" Icon="home.png"/>
+                    <Car:SearchCar Title="Sessions" Icon="home.png"/>
+                    
+                </TabbedPage.Children>
+            </TabbedPage>-->
+        </NavigationPage>
+  </MasterDetailPage.Detail>
+    
+</MasterDetailPage>

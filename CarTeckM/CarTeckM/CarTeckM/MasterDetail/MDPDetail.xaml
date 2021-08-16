@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CarTeckM.MasterDetail.MDPDetail"
+             Title="Detail">
+    <NavigationPage.TitleView>
+        <Label Text="WelCome To CarTeck" HorizontalOptions="FillAndExpand" TextColor="#ED630E" FontSize="22" ></Label>
+    </NavigationPage.TitleView>
+    <StackLayout Padding="10">
+        <Image Source="CarTeckLogo.png"></Image>
+        <Label Text="Project Developed" HorizontalTextAlignment="Center" FontSize="25"></Label>
+        <Label Text="By GHK" HorizontalTextAlignment="Center" FontSize="22" ></Label>
+    </StackLayout>
+</ContentPage>
