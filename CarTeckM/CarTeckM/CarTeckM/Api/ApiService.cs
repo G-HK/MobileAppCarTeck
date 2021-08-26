@@ -50,5 +50,15 @@ namespace CarTeckM.Api
         {
             throw new NotImplementedException();
         }
+
+        public bool UserNameValid(string username)
+        {
+            throw new NotImplementedException();
+        }
+
+        public bool EmailValid(string email)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

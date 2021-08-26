@@ -13,5 +13,10 @@ namespace CarTeckM.Api
         UserDto CreateUser(UserDto user);
         UserDto UpdateUser(UserDto user);
         UserDto DeleteUser(UserDto user);
+
+        bool UserNameValid(string username);
+        bool EmailValid(string email);
+
+
     }
 }

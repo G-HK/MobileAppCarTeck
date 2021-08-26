@@ -7,7 +7,7 @@ namespace CarTeckM.Models
 {
     public class UserDto
     {
-        public string IdentityID { get; set; }
+        public string ID { get; set; }
 
         [Required(ErrorMessage = "You should provide a Username value.")]
         [MaxLength(20)]

@@ -1,4 +1,6 @@
 ﻿using Android.Content;
+using CarTeckM.Models;
+using Newtonsoft.Json;
 using Rg.Plugins.Popup.Pages;
 using Rg.Plugins.Popup.Services;
 using System;
@@ -16,10 +18,15 @@ namespace CarTeckM.Account
     public partial class Login : PopupPage
     {
         public ISharedPreferences sharedPreferences;
+
+        ApiConnect connect;
+
         public Login()
         {
             InitializeComponent();
-            
+            connect = new ApiConnect();
+
+
             Accelerometer.ShakeDetected += Empty_Text;
 
         }
@@ -56,29 +63,29 @@ namespace CarTeckM.Account
             await PopupNavigation.Instance.PopAsync(true);
         }
 
-        private void btnLogin_Clicked(object sender, EventArgs e)
+        private async void btnLogin_Clicked(object sender, EventArgs e)
         {
-            //UserDto usr = connect.GetUser(EmailEtry.Text, PswEntry.Text);
+            UserDto usr = connect.GetUser(EmailEtry.Text, PswEntry.Text);
 
-            //if (usr != null)
-            //{
-            //    Preferences.Set("UserOb", JsonConvert.SerializeObject(usr));
-            //    UserModelView userView = new UserModelView();
-            //    userView.UserName = usr.UserName;
-            //    userView.Email = usr.Email;
-            //    userView.Password = usr.Password;
-            //    userView.UserID = usr.UserID;
+            if (usr != null)
+            {
+                Preferences.Set("UserOb", JsonConvert.SerializeObject(usr));
+                UserDto userView = new UserDto();
+                userView.UserName = usr.UserName;
+                userView.Email = usr.Email;
+                userView.Password = usr.Password;
+                userView.ID = usr.ID;
 
-            //    MdiPageMasterViewModel md = new MdiPageMasterViewModel();
-            //    md.NameUser = usr.UserName;
+                //MdiPageMasterViewModel md = new MdiPageMasterViewModel();
+                //md.NameUser = usr.UserName;
 
-            //    Preferences.Set("loginValid", true);
+                Preferences.Set("loginValid", true);
 
-            //    // var user= JsonConvert.DeserializeObject<User>(Preferences.Get(UserKey, "default_value");
-            //    await PopupNavigation.Instance.PopAsync(true);
+                // var user= JsonConvert.DeserializeObject<User>(Preferences.Get(UserKey, "default_value");
+                await PopupNavigation.Instance.PopAsync(true);
 
-            //    //save user
-            //}
+                //save user
+            }
         }
 
 

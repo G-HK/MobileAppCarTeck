@@ -7,11 +7,14 @@
              Command="{Binding RefreshCommand}">
         <ScrollView>
             <StackLayout>
+                <!--
+                
                 <Frame CornerRadius="75" HorizontalOptions="Center"  WidthRequest="150"  HeightRequest="150" Margin="10"  BorderColor="Orange" HasShadow="True"  BackgroundColor="Black"  Padding="0">
                     <Image Source="NoImageAvailable.png"  WidthRequest="150"  HeightRequest="150"  x:Name="profileImage"   VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"></Image>
                 </Frame>
 
                 <Image Source="gearImage.png" WidthRequest="30" HeightRequest="30" Margin="30,0" HorizontalOptions="Start" ></Image>
+                -->
                 
                 <Switch x:Name="EditData" Toggled="EditData_Toggled"  />
 
