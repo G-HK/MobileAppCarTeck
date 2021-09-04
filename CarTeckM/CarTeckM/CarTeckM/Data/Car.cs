@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SQLite;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -9,7 +10,7 @@ namespace CarTeckM.Data
     public class Car
     {
 
-        [Key]
+        [PrimaryKey, AutoIncrement]
         public int CarID { get; set; }
 
         //[DataType(DataType.Text)]
@@ -31,7 +32,7 @@ namespace CarTeckM.Data
         public char Currency { get; set; }
 
         //  [Required]
-        [Column(TypeName = "decimal(18, 2)")]
+        [System.ComponentModel.DataAnnotations.Schema.Column(TypeName = "decimal(18, 2)")]
         public decimal Price { get; set; }
 
         public string Color { get; set; }
@@ -54,10 +55,10 @@ namespace CarTeckM.Data
         //  path of the images are been save in db; split by;
         public string Picture { get; set; }
 
-        [Required]
-        public string IdentityID { get; set; }
+        [Indexed]
+        public string UserID { get; set; }
         // id of the car onwer or Dealer.
-        public User User { get; set; }
+        //public User User { get; set; }
 
         //  // QR Code
 

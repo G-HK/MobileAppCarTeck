@@ -9,8 +9,7 @@ namespace CarTeckM
 {
     public partial class App : Application
     {
-
-
+        
         public App()
         {
             InitializeComponent();
@@ -30,19 +29,6 @@ namespace CarTeckM
         {
         }
 
-        static CRTKDatabase database;
-
-
-        public static CRTKDatabase Database
-        {
-            get
-            {
-                if (database == null)
-                {
-                    database = new CRTKDatabase(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "Crtk.db3"));
-                }
-                return database;
-            }
-        }
+        
     }
 }

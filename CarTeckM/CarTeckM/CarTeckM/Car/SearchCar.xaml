@@ -1,12 +1,146 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="CarTeckM.Car.SearchCar">
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:forms="clr-namespace:Xamarin.RangeSlider.Forms;assembly=Xamarin.RangeSlider.Forms" xmlns:local="clr-namespace:CarTeckM.Behaviors" xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             x:Class="CarTeckM.Car.SearchCar"
+              xmlns:models="clr-namespace:CarTeckM.Models"
+             x:DataType="models:FilterCars">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <ScrollView Grid.Row="0">
+                <StackLayout HorizontalOptions="FillAndExpand" BackgroundColor="AliceBlue" Padding="0,10,0,100" >
+
+                    <Label HorizontalOptions="Center" Text="Brand &amp; Model" Margin="0,10,0,0"></Label>
+                    <Frame Margin="10">
+                        <StackLayout HorizontalOptions="FillAndExpand" >
+                            <Picker x:Name="ListMerk" SelectedItem="{Binding Brand,Mode=TwoWay}" HorizontalTextAlignment="Center"  Title="Merk"></Picker>
+                            
+                            <!--<Picker x:Name="ListModel" SelectedItem="{Binding Model,Mode=TwoWay}" HorizontalTextAlignment="Center" Title="Model"></Picker>-->
+                            
+                        </StackLayout>
+                    </Frame>
+                    <!--<Button Text="+ Meer Merken Toevoegen" x:Name="ShowMerken" BackgroundColor="Transparent" Clicked="ShowMerken_Clicked" TextColor="OrangeRed"></Button>-->
+
+                    <Label HorizontalOptions="Center" Text="BodyType"></Label>
+                    <Picker x:Name="PkrBodyType" Title="CarrosieVorm" SelectedItem="{Binding BodyType}" HorizontalTextAlignment="Center" BackgroundColor="White">
+                        <Picker.Items>
+                            <x:String>Any</x:String>
+                            <x:String>HatchBack</x:String>
+                            <x:String>Seden</x:String>
+                            <x:String>StationWagen</x:String>
+                            <x:String>Carbrio</x:String>
+                            <x:String>Coupé</x:String>
+                            <x:String>Suv</x:String>
+
+                        </Picker.Items>
+                        <d:Picker.SelectedIndex>0</d:Picker.SelectedIndex>
+
+                    </Picker>
+
+                    <Label HorizontalTextAlignment="Center" Text="Pijs"></Label>
+                    <Frame>
+                        <StackLayout>
+                            <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                                <Entry x:Name="BeginPrice" WidthRequest="100" Keyboard="Numeric" Text="{Binding LowerPrice, TargetNullValue='0' }"  IsEnabled="False" PropertyChanged="BeginPrice_PropertyChanged"></Entry>
+                                <Label Text="from"></Label>
+
+                                <Entry x:Name="EndPrice" WidthRequest="100" Keyboard="Numeric" Text="{Binding UpperPrice, TargetNullValue='5'}" IsEnabled="false"  PropertyChanged="EndPrice_PropertyChanged" >
+                                </Entry>
+                            </StackLayout>
+                            <forms:RangeSlider  x:Name="sliderPrice" MinimumValue="0" LowerValue="0" StepValue="1000"  LowerValueChanged="sliderPrice_LowerValueChanged" UpperValueChanged="sliderPrice_UpperValueChanged"  MaximumValue="50000" UpperValue="50000" ShowTextAboveThumbs="True" ></forms:RangeSlider>
+                        </StackLayout>
+                    </Frame>
+
+                    <Label HorizontalTextAlignment="Center" Text="BouwJaar"></Label>
+                    <Frame>
+                        <StackLayout>
+                            <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                                <Picker x:Name="BeginYearList" SelectedItem="{Binding BeginBuildYear}" WidthRequest="60" />
+
+                                <Label Text="from"></Label>
+                                <Picker x:Name="EndYearList" SelectedItem="{Binding EndBuildYear}" WidthRequest="60"/>
+                            </StackLayout>
+                        </StackLayout>
+                    </Frame>
+
+                    <Label HorizontalTextAlignment="Center" Text="Kilometerstand"></Label>
+                    <Frame>
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                            <Entry x:Name="RangeLowerLimit" WidthRequest="80" Text="{Binding LowerRange}" Keyboard="Numeric" HorizontalTextAlignment="Center" >
+                                <Entry.Behaviors>
+                                    <local:NumericEntry/>
+                                </Entry.Behaviors>
+                            </Entry>
+                            <Label>tot</Label>
+                            <Entry x:Name="RangeUpperLimit" WidthRequest="80" Text="{Binding UpperRange}" Keyboard="Numeric"  HorizontalTextAlignment="Center">
+                                <Entry.Behaviors>
+                                    <local:NumericEntry/>
+                                </Entry.Behaviors>
+                            </Entry>
+                            <Label>km</Label>
+                        </StackLayout>
+                    </Frame>
+
+                    <Label HorizontalTextAlignment="Center" Text="Vermogen"></Label>
+                    <Frame>
+                        <StackLayout HorizontalOptions="Center" Orientation="Horizontal">
+
+                            <Entry x:Name="PkLowerEntry" Keyboard="Numeric" Text="{ Binding LowerPower, TargetNullValue='0'}" WidthRequest="80" HorizontalTextAlignment="Center"></Entry>
+
+                            <Label>tot</Label>
+                            
+                            <Entry x:Name="PkUpperEntry" Keyboard="Numeric" Text="{ Binding UpperPower, StringFormat='0:C2', TargetNullValue='0' }" WidthRequest="80" HorizontalTextAlignment="Center"></Entry>
+                            
+                            
+
+                        </StackLayout>
+                    </Frame>
+
+                    <Label HorizontalTextAlignment="Center" Text="Brandstof"></Label>
+                    <Frame>
+                        <StackLayout HorizontalOptions="Center" Orientation="Horizontal">
+                            <Picker x:Name="FuelPicker" HorizontalTextAlignment="Center" SelectedIndex="{Binding FuelType}" WidthRequest="100">
+                                <Picker.Items>
+                                    <x:String>Any</x:String>
+                                    <x:String>Diesel</x:String>
+                                    <x:String>Benzin</x:String>
+                                    <x:String>Elektrisch</x:String>
+                                    <x:String>LPG</x:String>
+                                    <x:String>CNG</x:String>
+                                    <x:String>Covering</x:String>
+                                </Picker.Items>
+                                <d:Picker.SelectedIndex>0</d:Picker.SelectedIndex>
+
+                            </Picker>
+                        </StackLayout>
+                    </Frame>
+
+                    <Label HorizontalTextAlignment="Center" Text="Transmissie"></Label>
+                    <Frame>
+                        <StackLayout HorizontalOptions="Center" Orientation="Horizontal">
+                            <Picker x:Name="GearBoxPicker" SelectedItem="{Binding Transmission}" HorizontalTextAlignment="Center" WidthRequest="200" SelectedIndex="1">
+                                <Picker.Items>
+                                    <x:String>Any</x:String>
+                                    <x:String>Manual</x:String>
+                                    <x:String>Automatisch</x:String>
+                                    <x:String>Half/Semi-automaat</x:String>
+                                    <x:String>sequential</x:String>
+                                </Picker.Items>
+                                <d:Picker.SelectedIndex>0</d:Picker.SelectedIndex>
+                            </Picker>
+                        </StackLayout>
+                    </Frame>
+
+
+
+                </StackLayout>
+            </ScrollView>
+
+            <Button Grid.Row="0" x:Name="SearchButton" Clicked="SearchButton_Clicked" HorizontalOptions="Center" BorderRadius="40" BorderColor="Black" BorderWidth="1" Margin="0,0,0,20" WidthRequest="200" HeightRequest="55" Text="Search" VerticalOptions="End" BackgroundColor="Yellow"/>
+
+        </Grid>
     </ContentPage.Content>
 </ContentPage>

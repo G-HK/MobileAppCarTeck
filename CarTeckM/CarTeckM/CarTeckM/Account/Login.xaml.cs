@@ -61,6 +61,7 @@ namespace CarTeckM.Account
         private async void btnX_Clicked(object sender, EventArgs e)
         {
             await PopupNavigation.Instance.PopAsync(true);
+            Accelerometer.Stop();
         }
 
         private async void btnLogin_Clicked(object sender, EventArgs e)
@@ -71,7 +72,7 @@ namespace CarTeckM.Account
             {
                 Preferences.Set("UserOb", JsonConvert.SerializeObject(usr));
                 UserDto userView = new UserDto();
-                userView.UserName = usr.UserName;
+                userView.Username = usr.Username;
                 userView.Email = usr.Email;
                 userView.Password = usr.Password;
                 userView.ID = usr.ID;
@@ -82,6 +83,7 @@ namespace CarTeckM.Account
                 Preferences.Set("loginValid", true);
 
                 // var user= JsonConvert.DeserializeObject<User>(Preferences.Get(UserKey, "default_value");
+                Accelerometer.Stop();
                 await PopupNavigation.Instance.PopAsync(true);
 
                 //save user
@@ -91,6 +93,7 @@ namespace CarTeckM.Account
 
         private async void btnRegistater_Clicked(object sender, EventArgs e)
         {
+            Accelerometer.Stop();
             await Navigation.PushModalAsync(new RegistrationPage());
 
             await PopupNavigation.Instance.PopAsync(true);

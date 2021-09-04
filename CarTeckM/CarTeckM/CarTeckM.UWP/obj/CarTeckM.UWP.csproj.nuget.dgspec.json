@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\h_kad\\Documenten\\Project\\CarFee\\MobileAppCarTeck\\CarTeckM\\CarTeckM\\CarTeckM.UWP\\CarTeckM.UWP.csproj": {}
+    "C:\\Users\\h_kad\\Documents\\GitHub\\MobileAppCarTeck\\CarTeckM\\CarTeckM\\CarTeckM.UWP\\CarTeckM.UWP.csproj": {}
   },
   "projects": {
-    "C:\\Users\\h_kad\\Documenten\\Project\\CarFee\\MobileAppCarTeck\\CarTeckM\\CarTeckM\\CarTeckM.UWP\\CarTeckM.UWP.csproj": {
+    "C:\\Users\\h_kad\\Documents\\GitHub\\MobileAppCarTeck\\CarTeckM\\CarTeckM\\CarTeckM.UWP\\CarTeckM.UWP.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\h_kad\\Documenten\\Project\\CarFee\\MobileAppCarTeck\\CarTeckM\\CarTeckM\\CarTeckM.UWP\\CarTeckM.UWP.csproj",
+        "projectUniqueName": "C:\\Users\\h_kad\\Documents\\GitHub\\MobileAppCarTeck\\CarTeckM\\CarTeckM\\CarTeckM.UWP\\CarTeckM.UWP.csproj",
         "projectName": "CarTeckM.UWP",
-        "projectPath": "C:\\Users\\h_kad\\Documenten\\Project\\CarFee\\MobileAppCarTeck\\CarTeckM\\CarTeckM\\CarTeckM.UWP\\CarTeckM.UWP.csproj",
+        "projectPath": "C:\\Users\\h_kad\\Documents\\GitHub\\MobileAppCarTeck\\CarTeckM\\CarTeckM\\CarTeckM.UWP\\CarTeckM.UWP.csproj",
         "packagesPath": "C:\\Users\\h_kad\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\h_kad\\Documenten\\Project\\CarFee\\MobileAppCarTeck\\CarTeckM\\CarTeckM\\CarTeckM.UWP\\obj\\",
+        "outputPath": "C:\\Users\\h_kad\\Documents\\GitHub\\MobileAppCarTeck\\CarTeckM\\CarTeckM\\CarTeckM.UWP\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "fallbackFolders": [
@@ -30,14 +30,13 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Users\\h_kad\\.nuget\\packages": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "uap10.0.16299": {
             "projectReferences": {
-              "C:\\Users\\h_kad\\Documenten\\Project\\CarFee\\MobileAppCarTeck\\CarTeckM\\CarTeckM\\CarTeckM\\CarTeckM.csproj": {
-                "projectPath": "C:\\Users\\h_kad\\Documenten\\Project\\CarFee\\MobileAppCarTeck\\CarTeckM\\CarTeckM\\CarTeckM\\CarTeckM.csproj"
+              "C:\\Users\\h_kad\\Documents\\GitHub\\MobileAppCarTeck\\CarTeckM\\CarTeckM\\CarTeckM\\CarTeckM.csproj": {
+                "projectPath": "C:\\Users\\h_kad\\Documents\\GitHub\\MobileAppCarTeck\\CarTeckM\\CarTeckM\\CarTeckM\\CarTeckM.csproj"
               }
             }
           }
@@ -80,7 +79,7 @@
             },
             "Xamarin.Forms": {
               "target": "Package",
-              "version": "[4.8.0.1821, )"
+              "version": "[5.0.0.2012, )"
             },
             "Xamarin.Forms.RangeSlider": {
               "target": "Package",
@@ -122,19 +121,18 @@
         }
       }
     },
-    "C:\\Users\\h_kad\\Documenten\\Project\\CarFee\\MobileAppCarTeck\\CarTeckM\\CarTeckM\\CarTeckM\\CarTeckM.csproj": {
+    "C:\\Users\\h_kad\\Documents\\GitHub\\MobileAppCarTeck\\CarTeckM\\CarTeckM\\CarTeckM\\CarTeckM.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\h_kad\\Documenten\\Project\\CarFee\\MobileAppCarTeck\\CarTeckM\\CarTeckM\\CarTeckM\\CarTeckM.csproj",
+        "projectUniqueName": "C:\\Users\\h_kad\\Documents\\GitHub\\MobileAppCarTeck\\CarTeckM\\CarTeckM\\CarTeckM\\CarTeckM.csproj",
         "projectName": "CarTeckM",
-        "projectPath": "C:\\Users\\h_kad\\Documenten\\Project\\CarFee\\MobileAppCarTeck\\CarTeckM\\CarTeckM\\CarTeckM\\CarTeckM.csproj",
+        "projectPath": "C:\\Users\\h_kad\\Documents\\GitHub\\MobileAppCarTeck\\CarTeckM\\CarTeckM\\CarTeckM\\CarTeckM.csproj",
         "packagesPath": "C:\\Users\\h_kad\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\h_kad\\Documenten\\Project\\CarFee\\MobileAppCarTeck\\CarTeckM\\CarTeckM\\CarTeckM\\obj\\",
+        "outputPath": "C:\\Users\\h_kad\\Documents\\GitHub\\MobileAppCarTeck\\CarTeckM\\CarTeckM\\CarTeckM\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\",
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
           "C:\\Users\\h_kad\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -147,7 +145,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Users\\h_kad\\.nuget\\packages": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -206,7 +203,7 @@
             },
             "Xamarin.Forms": {
               "target": "Package",
-              "version": "[4.8.0.1821, )"
+              "version": "[5.0.0.2012, )"
             },
             "Xamarin.Forms.RangeSlider": {
               "target": "Package",

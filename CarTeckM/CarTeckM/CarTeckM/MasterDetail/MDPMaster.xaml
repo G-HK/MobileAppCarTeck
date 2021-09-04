@@ -22,7 +22,7 @@
             <RowDefinition Height="25"/>
           </Grid.RowDefinitions>
                     <Image Aspect="Fill" Grid.Column="0" Grid.Row="0" Source="CarTeckLogo.png" Margin="10,0,0,0" x:Name="logoApp"  VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"></Image>
-                    <Label Grid.Column="1" Grid.Row="0" Text="NameUser"  VerticalTextAlignment="Center" HorizontalTextAlignment="Center" ></Label>
+                    <Label Grid.Column="1" Grid.Row="0" x:Name="UserNamelbl" Text="NameUser"  VerticalTextAlignment="Center" HorizontalTextAlignment="Center" ></Label>
 
                     <Frame CornerRadius="60"   Grid.Column="1" Grid.Row="1"    HeightRequest="120"   BackgroundColor="Red"  Padding="0">
                         

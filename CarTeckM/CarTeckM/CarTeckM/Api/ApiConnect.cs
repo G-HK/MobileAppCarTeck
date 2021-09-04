@@ -15,7 +15,7 @@ namespace CarTeckM.Models
 
         public ApiConnect()
         {
-            httpClient =  new HttpClient { BaseAddress = new Uri("http://f73a2fc5ebb7.ngrok.io") };//http://10.0.2.2:3866
+            httpClient =  new HttpClient { BaseAddress = new Uri("http://cd33-84-193-49-225.ngrok.io ") };//http://10.0.2.2:3866
             httpClient.DefaultRequestHeaders.Accept.Clear();
             httpClient.DefaultRequestHeaders.Accept.Add(new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));
         //    _mapper = mapper ?? throw new ArgumentNullException(nameof(mapper));

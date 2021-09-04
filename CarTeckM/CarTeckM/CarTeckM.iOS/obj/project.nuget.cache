@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Y6T5YnPEAmxbIgy48LS/16pm/fo3nM1PqEew1aOB6hsjK9yfA9SXSidtLcwaNhDX+VCJxJhb0UQ7yZYUIUgAQw==",
+  "dgSpecHash": "4nP5gm2P/ioUps7yxLBBXwDJkWCTJLMyCLn73OGJmF+9zKm9ABuXHLXt2G8xRpD+J6rnd/sxb9a4MTxxsYc1bw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\h_kad\\Documenten\\Project\\CarFee\\MobileAppCarTeck\\CarTeckM\\CarTeckM\\CarTeckM.iOS\\CarTeckM.iOS.csproj",
+  "projectFilePath": "C:\\Users\\h_kad\\Documents\\GitHub\\MobileAppCarTeck\\CarTeckM\\CarTeckM\\CarTeckM.iOS\\CarTeckM.iOS.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\h_kad\\.nuget\\packages\\microsoft.aspnetcore.http\\2.2.2\\microsoft.aspnetcore.http.2.2.2.nupkg.sha512",
     "C:\\Users\\h_kad\\.nuget\\packages\\microsoft.aspnetcore.http.abstractions\\2.2.0\\microsoft.aspnetcore.http.abstractions.2.2.0.nupkg.sha512",
@@ -30,7 +30,7 @@
     "C:\\Users\\h_kad\\.nuget\\packages\\system.text.encodings.web\\4.5.0\\system.text.encodings.web.4.5.0.nupkg.sha512",
     "C:\\Users\\h_kad\\.nuget\\packages\\xam.plugin.media\\5.0.1\\xam.plugin.media.5.0.1.nupkg.sha512",
     "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\xamarin.essentials\\1.6.1\\xamarin.essentials.1.6.1.nupkg.sha512",
-    "C:\\Users\\h_kad\\.nuget\\packages\\xamarin.forms\\4.8.0.1821\\xamarin.forms.4.8.0.1821.nupkg.sha512",
+    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\xamarin.forms\\5.0.0.2012\\xamarin.forms.5.0.0.2012.nupkg.sha512",
     "C:\\Users\\h_kad\\.nuget\\packages\\xamarin.forms.rangeslider\\1.0.2\\xamarin.forms.rangeslider.1.0.2.nupkg.sha512",
     "C:\\Users\\h_kad\\.nuget\\packages\\xamarin.rangeslider\\1.0.2\\xamarin.rangeslider.1.0.2.nupkg.sha512"
   ],

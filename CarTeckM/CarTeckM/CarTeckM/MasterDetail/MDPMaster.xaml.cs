@@ -1,5 +1,6 @@
 ﻿using CarTeckM.Account;
 using CarTeckM.Car;
+using CarTeckM.Models;
 using Rg.Plugins.Popup.Services;
 using System;
 using System.Collections.Generic;
@@ -26,6 +27,11 @@ namespace CarTeckM.MasterDetail
 
             BindingContext = new MDPMasterViewModel();
             ListView = MenuItemsListView;
+
+            UserDto userDto = new UserDto();
+           // UserNamelbl.Text = BindableProperty.
+
+            
         }
 
         class MDPMasterViewModel : INotifyPropertyChanged

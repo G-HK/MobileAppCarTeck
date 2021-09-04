@@ -4,7 +4,7 @@
              x:Class="CarTeckM.Car.CarPage"
              xmlns:Models="clr-namespace:CarTeckM.Models"
              x:DataType="Models:CarDto"
-              x:imagedata="DataType:Picture">
+             >
     <ContentPage.Content>
         <RefreshView>
             <ScrollView>

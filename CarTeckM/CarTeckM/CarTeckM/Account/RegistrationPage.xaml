@@ -1,12 +1,30 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="CarTeckM.Account.RegistrationPage">
+             x:Class="CarTeckM.Account.RegistrationPage"
+              xmlns:models="clr-namespace:CarTeckM.Models"
+             x:DataType="models:UserDto"
+              >
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+        <StackLayout  HorizontalOptions="FillAndExpand" >
+            <Button Text="X" Clicked="Button_Clicked" BackgroundColor="Transparent" FontSize="20" HorizontalOptions="End" Margin="0,0,0,-50"></Button>
+            <Image Source="CarTeckLogo.png" WidthRequest="80" HorizontalOptions="Center"></Image>
+            <Label Text="Register" HorizontalOptions="Center" FontSize="25"></Label>
+
+            <Entry  x:Name="UserEntry" Placeholder="Username" Margin="10,0" Text="{Binding UserName}" HorizontalTextAlignment="Start" />
+            <!--<StackLayout Orientation="Horizontal">
+            <Entry  x:Name="FirstNameEntry" Placeholder="FirstName" Margin="10,0,0,0" Text="FirstName" HorizontalTextAlignment="Start" HorizontalOptions="FillAndExpand" />
+            <Entry  x:Name="LastNameEntry" Placeholder="LastName" Margin="0,0,10,0" Text="LastName" HorizontalTextAlignment="Start" HorizontalOptions="FillAndExpand" />
+        </StackLayout>-->
+
+            <Entry  x:Name="EMailEntry" Placeholder="E-Mail" Margin="10,0" Text="{Binding Email}" Keyboard="Email" HorizontalTextAlignment="Start"  />
+            <Label x:Name="LblErrorPsw" Text="Password is Incorrect" HorizontalTextAlignment="Center" TextColor="Red" FontSize="22" Margin="0,10,0,0" IsVisible="False" ></Label>
+            <Entry  x:Name="PswEntry1" Placeholder="Password" Margin="10,0" Text="{Binding Password}" IsPassword="True"  HorizontalTextAlignment="Start" />
+            <Entry  x:Name="PswEntry2" Placeholder="Password" Margin="10,0" Text="" Keyboard="Default" IsPassword="True" HorizontalTextAlignment="Start" />
+            <DatePicker x:Name="BirhtDate" Date="{Binding BirthDate}" HorizontalOptions="CenterAndExpand" WidthRequest="105"></DatePicker>
+
+            <Button x:Name="BtnRegisteren" Text="Registeren" Clicked="BtnRegisteren_Clicked" HorizontalOptions="Center" BackgroundColor="Green"/>
+
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
