@@ -27,16 +27,16 @@ namespace CarTeckM.Car
            
 
 
-            List<ImageCell> imageSources = new List<ImageCell>();
+            //List<ImageCell> imageSources = new List<ImageCell>();
 
-            foreach (var item in CarID.Picture)
-            {
-                var imagec = new ImageCell { ImageSource = ImageSource.FromFile(item) }; /*ImageSource.FromUri(new Uri(item))*/
+            //foreach (var item in CarID.Picture)
+            //{
+            //    var imagec = new ImageCell { ImageSource = ImageSource.FromFile(item) }; /*ImageSource.FromUri(new Uri(item))*/
 
-            imageSources.Add(imagec);
-            }
+            //imageSources.Add(imagec);
+            //}
 
-            CarouselImage.ItemsSource = imageSources.ToArray();
+            //CarouselImage.ItemsSource = imageSources.ToArray();
             
 
             //foreach (MediaFile photoFile in photoFiles)

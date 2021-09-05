@@ -48,7 +48,7 @@
             <Color x:Key="SystemGray5Dark">#2C2C2E</Color>
             <Color x:Key="SystemGray6Dark">#1C1C1E</Color>
 
-            <Style x:Key="CoffeeListView" TargetType="ListView">
+            <Style x:Key="CarListView" TargetType="ListView">
                 <Setter Property="HasUnevenRows" Value="True"/>
                 <Setter Property="BackgroundColor" Value="Transparent"/>
                 <Setter Property="SeparatorVisibility"
@@ -69,6 +69,8 @@
                         Value="{AppThemeBinding Dark={StaticResource TextColorDark},
                     Light={StaticResource TextColor}}" />
             </Style>
+            
+            
 
             <Style x:Key="LabelMicro" TargetType="Label" BasedOn="{StaticResource BaseLabel}">
                 <Setter Property="FontSize" Value="Micro"/>
@@ -99,7 +101,7 @@
                 <Setter Property="HorizontalOptions" Value="Center" />
             </Style>
 
-            <Style x:Key="CoffeeCard" TargetType="Frame">
+            <Style x:Key="CarCard" TargetType="Frame">
                 <Setter Property="HasShadow" 
                         Value="{OnPlatform Android=true, iOS=false, Default=true}"/>
                 <Setter Property="CornerRadius" Value="20"/>
@@ -108,7 +110,76 @@
                     Light={StaticResource CardBackground}}"/>
             </Style>
 
-            <x:String x:Key="IconCoffee">&#xf0f4;</x:String>
+            <!--<Style x:Key="ImageFrame" TargetType="Frame">
+                <Setter Property="HasShadow" 
+                        Value="{OnPlatform Android=true, iOS=false, Default=true}"/>
+                <Setter Property="CornerRadius" Value="20"/>
+                <Setter Property="O"></Setter>
+                <Setter Property="BackgroundColor"
+                        Value="{AppThemeBinding Dark={StaticResource CardBackgroundDark},
+                    Light={StaticResource CardBackground}}"/>
+            </Style>-->
+
+            <Style x:Key="BaseEntry" TargetType="Entry">
+                <Setter Property="TextColor" 
+                        Value="{AppThemeBinding Dark={StaticResource TextColorDark},
+                    Light={StaticResource TextColor}}" />
+                <Setter Property="BackgroundColor" 
+                        Value="{AppThemeBinding Dark={StaticResource SystemGray},
+                    Light={StaticResource TextColorDark}}" />
+            </Style>
+
+            <Style x:Key="BasePicker" TargetType="DatePicker">
+                <Setter Property="TextColor" 
+                        Value="{AppThemeBinding Dark={StaticResource TextColorDark},
+                    Light={StaticResource TextColor}}"
+                        />
+                <Setter Property="BackgroundColor"
+                        Value="{AppThemeBinding Dark={StaticResource SystemGray},
+                    Light={StaticResource CardBackground}}"/>
+            </Style>
+
+
+            <!--<Style x:Key="BaseImage" TargetType="Image">
+                <Setter Property="Outline" 
+                        Value="{AppThemeBinding Dark={StaticResource TextColorDark},
+                    Light={StaticResource TextColor}}"
+                        />
+                <Setter Property="BackgroundColor"
+                        Value="{AppThemeBinding Dark={StaticResource CardBackgroundDark},
+                    Light={StaticResource CardBackground}}"/>
+            </Style>-->
+            
+            <Style x:Key="BaseSwitch" TargetType="Switch">
+                <Setter Property="OnColor" 
+                        Value="{AppThemeBinding Dark={StaticResource TextColorDark},
+                    Light={StaticResource TextColor}}"
+                        />
+                <Setter Property="BackgroundColor"
+                        Value="{AppThemeBinding Dark={StaticResource CardBackgroundDark},
+                    Light={StaticResource CardBackground}}"/>
+            </Style>
+
+            <Style x:Key="Stack" TargetType="StackLayout">
+               
+                <Setter Property="BackgroundColor"
+                        Value="{AppThemeBinding Dark={StaticResource CardBackgroundDark},
+                    Light={StaticResource CardBackground}}"/>
+            </Style>   
+            
+            <Style x:Key="Pick" TargetType="Picker">
+               
+                <Setter Property="BackgroundColor"
+                        Value="{AppThemeBinding Dark={StaticResource CardBackgroundDark},
+                    Light={StaticResource CardBackground}}"/>
+                <Setter Property="TextColor"
+                        Value="{AppThemeBinding Dark={StaticResource CardBackgroundDark},
+                    Light={StaticResource CardBackground}}"/>
+            </Style>
+
+      
+
+            <x:String x:Key="CarTeckLogo">&#xf0f4;</x:String>
         </ResourceDictionary>
     </Application.Resources>
 

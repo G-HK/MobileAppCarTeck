@@ -11,7 +11,7 @@
             <Image Source="CarTeckLogo.png" WidthRequest="80" HorizontalOptions="Center"></Image>
             <Label Text="Register" HorizontalOptions="Center" FontSize="25"></Label>
 
-            <Entry  x:Name="UserEntry" Placeholder="Username" Margin="10,0" Text="{Binding UserName}" HorizontalTextAlignment="Start" />
+            <Entry  x:Name="UserEntry" Placeholder="Username" Margin="10,0" Text="{Binding Username}" HorizontalTextAlignment="Start" />
             <!--<StackLayout Orientation="Horizontal">
             <Entry  x:Name="FirstNameEntry" Placeholder="FirstName" Margin="10,0,0,0" Text="FirstName" HorizontalTextAlignment="Start" HorizontalOptions="FillAndExpand" />
             <Entry  x:Name="LastNameEntry" Placeholder="LastName" Margin="0,0,10,0" Text="LastName" HorizontalTextAlignment="Start" HorizontalOptions="FillAndExpand" />

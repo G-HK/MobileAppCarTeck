@@ -1,12 +1,21 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="CarTeckM.Account.ProfilePage">
+             x:Class="CarTeckM.Account.ProfilePage"
+              xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+             
+             BackgroundColor="{AppThemeBinding 
+                        Dark={StaticResource WindowBackgroundColorDark}, 
+                        Light={StaticResource WindowBackgroundColor}}"
+             
+             >
     <ContentPage.Content>
         <RefreshView IsRefreshing="{Binding IsRefreshing}" RefreshColor="Blue"
              Command="{Binding RefreshCommand}">
         <ScrollView>
-            <StackLayout>
+            <StackLayout
+                
+                >
                 <!--
                 
                 <Frame CornerRadius="75" HorizontalOptions="Center"  WidthRequest="150"  HeightRequest="150" Margin="10"  BorderColor="Orange" HasShadow="True"  BackgroundColor="Black"  Padding="0">
@@ -16,26 +25,26 @@
                 <Image Source="gearImage.png" WidthRequest="30" HeightRequest="30" Margin="30,0" HorizontalOptions="Start" ></Image>
                 -->
                 
-                <Switch x:Name="EditData" Toggled="EditData_Toggled"  />
+                <Switch x:Name="EditData" Toggled="EditData_Toggled" Style="{DynamicResource BaseSwitch}"  />
 
-                <StackLayout Orientation="Horizontal" Margin="5,10">
-                    <Label Text="UserName :" FontSize="18"></Label>
-                    <Entry Placeholder="NameUser" x:Name="usernameEntry"  HorizontalTextAlignment="Center" IsEnabled="False"  HorizontalOptions="FillAndExpand" Margin="5,0,0,0" Keyboard="Text" Text="GreatKing"></Entry>
+                    <StackLayout Orientation="Horizontal" Margin="5,10">
+                        <Label Text="UserName :" FontSize="18"  Style="{DynamicResource LabelMedium}"></Label>
+                        <Entry Placeholder="NameUser" x:Name="usernameEntry" Style="{DynamicResource BaseEntry}"   HorizontalTextAlignment="Center" IsEnabled="False"  HorizontalOptions="FillAndExpand" Margin="5,0,0,0" Keyboard="Text" Text="GreatKing"></Entry>
                 </StackLayout>
 
                 <StackLayout Orientation="Horizontal" Margin="5,10">
-                    <Label Text="Email :" FontSize="18"></Label>
-                    <Entry Placeholder="Email" x:Name="emailEntry" HorizontalTextAlignment="Center" IsEnabled="False"   HorizontalOptions="FillAndExpand" Margin="5,0,0,0" Keyboard="Email" Text="GK@World.com" ></Entry>
+                        <Label Text="Email :" FontSize="18"  Style="{DynamicResource LabelMedium}"></Label>
+                        <Entry Placeholder="Email" x:Name="emailEntry" Style="{DynamicResource BaseEntry}"  HorizontalTextAlignment="Center" IsEnabled="False"   HorizontalOptions="FillAndExpand" Margin="5,0,0,0" Keyboard="Email" Text="GK@World.com" ></Entry>
                 </StackLayout>
 
                 <StackLayout Orientation="Horizontal" Margin="5,10">
-                    <Label Text="Birthday :" FontSize="18"></Label>
-                    <DatePicker  HorizontalOptions="CenterAndExpand" x:Name="birhtDatePicker"  IsEnabled="False"  MaximumDate="12/31/2018"  Date="12/22/1996" />
+                        <Label Text="Birthday :" FontSize="18"  Style="{DynamicResource LabelMedium}"></Label>
+                    <DatePicker  HorizontalOptions="CenterAndExpand" Style="{DynamicResource BasePicker}" x:Name="birhtDatePicker"  IsEnabled="False"  MaximumDate="12/31/2018"  Date="12/22/1996" />
                 </StackLayout>
 
                 <StackLayout Orientation="Horizontal" Margin="5,10">
-                    <Label Text="Password :" FontSize="18"></Label>
-                    <Entry Placeholder="Password" x:Name="pswEntry" HorizontalTextAlignment="Center" IsEnabled="False"   HorizontalOptions="FillAndExpand" Margin="5,0,0,0" IsPassword="True" Text="helloworld" Keyboard="Text"></Entry>
+                        <Label Text="Password :" FontSize="18"  Style="{DynamicResource LabelMedium}"></Label>
+                        <Entry Placeholder="Password" x:Name="pswEntry" HorizontalTextAlignment="Center" Style="{DynamicResource BaseEntry}" IsEnabled="False"   HorizontalOptions="FillAndExpand" Margin="5,0,0,0" IsPassword="True" Text="helloworld" Keyboard="Text"></Entry>
                 </StackLayout>
 
 

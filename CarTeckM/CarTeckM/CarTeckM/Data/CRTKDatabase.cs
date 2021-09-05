@@ -14,12 +14,12 @@ namespace CarTeckM.Data
 
         // Temporarily used for the Demo
 
-        public CRTKDatabase(string dbPath)
-        {
-            database = new SQLiteAsyncConnection(dbPath);
-            database.CreateTableAsync<User>().Wait();
-            database.CreateTableAsync<Car>().Wait();
-        }
+        //public CRTKDatabase(string dbPath)
+        //{
+        //    database = new SQLiteAsyncConnection(dbPath);
+        //    database.CreateTableAsync<User>().Wait();
+        //    database.CreateTableAsync<Car>().Wait();
+        //}
 
         async Task Init()
         {
@@ -32,13 +32,14 @@ namespace CarTeckM.Data
             database = new SQLiteAsyncConnection(databasePath);
 
             await database.CreateTableAsync<Car>();
+            await database.CreateTableAsync<Mediaitem>();
         }
 
 
         public async Task AddCar(Car car)
         {
             await Init();
-            var image = "https://www.yesplz.coffee/app/uploads/2020/11/emptybag-min.png";
+           // var image = "https://www.yesplz.coffee/app/uploads/2020/11/emptybag-min.png";
             //var car = new Car
             //{
             //    //Name = name,

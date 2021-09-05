@@ -2,29 +2,151 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="CarTeckM.Car.SellCar"
-              xmlns:models="clr-namespace:CarTeckM.Models"
-             x:DataType="models:CarDto">
+              xmlns:models="clr-namespace:CarTeckM.Models" xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             x:DataType="models:CarDto"
+              BackgroundColor="{AppThemeBinding 
+                        Dark={StaticResource WindowBackgroundColorDark}, 
+                        Light={StaticResource WindowBackgroundColor}}">
     <ContentPage.Content>
         <ScrollView>
-            <ListView  x:Name="listView">
+
+            <StackLayout>
+
+                <Label Text="Image"></Label>
+                <Button Text="Pick Images" x:Name="PickBtn" Clicked="PickBtn_Clicked"></Button>
+                
+                <Label HorizontalOptions="Center" Text="Brand &amp; Model" Margin="0,10,0,0" Style="{DynamicResource BaseLabel}"></Label>
+
+                <Frame Margin="10" >
+                    <StackLayout HorizontalOptions="FillAndExpand"  >
+                        <Picker x:Name="ListBrand" SelectedItem="{Binding Brand,Mode=TwoWay}"  HorizontalTextAlignment="Center"  Title="Brand"></Picker>
+
+                      
+                        <!--<Picker x:Name="ListModel" SelectedItem="{Binding Model,Mode=TwoWay}" HorizontalTextAlignment="Center" Title="Model"></Picker>-->
+                         </StackLayout>
+                </Frame>
+
+
+                <StackLayout Orientation="Horizontal" Margin="5,10">
+                    <Label Text="Model:" FontSize="18"  Style="{DynamicResource LabelMedium}"></Label>
+                    <Entry Placeholder="Model" x:Name="modelEntry" Style="{DynamicResource BaseEntry}"   HorizontalTextAlignment="Center" IsEnabled="False"  HorizontalOptions="FillAndExpand" Margin="5,0,0,0" Keyboard="Text" Text="GreatKing"></Entry>
+                </StackLayout>
+
+                <Label HorizontalTextAlignment="Center" Style="{DynamicResource BaseLabel}" Text="Transmissie"></Label>
+                <Frame>
+                    <StackLayout HorizontalOptions="Center" Orientation="Horizontal">
+                        <Picker x:Name="GearBoxPicker" SelectedItem="{Binding Transmission}" HorizontalTextAlignment="Center" WidthRequest="200" SelectedIndex="1">
+                            <Picker.Items>
+                                <x:String>Any</x:String>
+                                <x:String>Manual</x:String>
+                                <x:String>Automatisch</x:String>
+                                <x:String>Half/Semi-automaat</x:String>
+                                <x:String>sequential</x:String>
+                            </Picker.Items>
+                            <d:Picker.SelectedIndex>0</d:Picker.SelectedIndex>
+                        </Picker>
+                    </StackLayout>
+                </Frame>
+
+
+                <Label HorizontalOptions="Center" Text="BodyType" Style="{DynamicResource BaseLabel}"></Label>
+                <Picker x:Name="PkrBodyType" Title="CarrosieVorm" SelectedItem="{Binding BodyType}" HorizontalTextAlignment="Center" BackgroundColor="White">
+                    <Picker.Items>
+                        <x:String>Any</x:String>
+                        <x:String>HatchBack</x:String>
+                        <x:String>Seden</x:String>
+                        <x:String>StationWagen</x:String>
+                        <x:String>Carbrio</x:String>
+                        <x:String>Coupé</x:String>
+                        <x:String>Suv</x:String>
+
+                    </Picker.Items>
+                    <d:Picker.SelectedIndex>0</d:Picker.SelectedIndex>
+                </Picker>
+
+                <Label HorizontalTextAlignment="Center" Style="{DynamicResource BaseLabel}" Text="Brandstof"></Label>
+                <Frame>
+                    <StackLayout HorizontalOptions="Center" Orientation="Horizontal">
+                        <Picker x:Name="FuelPicker" HorizontalTextAlignment="Center" SelectedIndex="{Binding FuelType}" WidthRequest="100">
+                            <Picker.Items>
+                                <x:String>Any</x:String>
+                                <x:String>Diesel</x:String>
+                                <x:String>Benzin</x:String>
+                                <x:String>Elektrisch</x:String>
+                                <x:String>LPG</x:String>
+                                <x:String>CNG</x:String>
+                                <x:String>Covering</x:String>
+                            </Picker.Items>
+                            <d:Picker.SelectedIndex>0</d:Picker.SelectedIndex>
+
+                        </Picker>
+                    </StackLayout>
+                </Frame>
+
+
+                <StackLayout Orientation="Horizontal" Margin="5,10">
+                    <Label Text="Price:" FontSize="18"  Style="{DynamicResource LabelMedium}"></Label>
+                    <Entry Placeholder="Model" x:Name="priceEntry" Style="{DynamicResource BaseEntry}"   HorizontalTextAlignment="Center" IsEnabled="False"  HorizontalOptions="FillAndExpand" Margin="5,0,0,0" Keyboard="Text" Text="GreatKing"></Entry>
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal" Margin="5,10">
+                    <Label Text="Range:" FontSize="18"  Style="{DynamicResource LabelMedium}"></Label>
+                    <Entry Placeholder="911" x:Name="RangeEntry" Style="{DynamicResource BaseEntry}"   HorizontalTextAlignment="Center" IsEnabled="False"  HorizontalOptions="FillAndExpand" Margin="5,0,0,0" Keyboard="Text" Text="GreatKing"></Entry>
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal" Margin="5,10">
+                    <Label Text="Color:" FontSize="18"  Style="{DynamicResource LabelMedium}"></Label>
+                    <Entry Placeholder="color" x:Name="ColorEntry" Style="{DynamicResource BaseEntry}"   HorizontalTextAlignment="Center" IsEnabled="False"  HorizontalOptions="FillAndExpand" Margin="5,0,0,0" Keyboard="Text" Text="GreatKing"></Entry>
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal" Margin="5,10">
+                    <Label Text="Power:" FontSize="18"  Style="{DynamicResource LabelMedium}"></Label>
+                    <Entry Placeholder="Power" x:Name="PowerEntry" Style="{DynamicResource BaseEntry}"   HorizontalTextAlignment="Center" IsEnabled="False"  HorizontalOptions="FillAndExpand" Margin="5,0,0,0" Keyboard="Text" Text="GreatKing"></Entry>
+                </StackLayout>
+
+            </StackLayout>
+            
+            
+            
+            
+            
+            
+            
+            
+            <!--<ListView  x:Name="listView">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
-                            <StackLayout BackgroundColor="#eee"
-                        Orientation="Vertical">
+                            <StackLayout BackgroundColor="#eee"   Orientation="Vertical">
+                                
+                                
                                 <StackLayout Orientation="Horizontal">
-                                    <Image Source="{Binding Piture[0]}" />
-                                    <Label Text="{Binding Brand }"
-                                TextColor="#f35e20" />
+                                    <Image Source="{Binding Picture[0]}" />
+
+                                    <Label HorizontalOptions="Center" Text="Brand &amp; Model" Margin="0,10,0,0" Style="{DynamicResource BaseLabel}"></Label>
+
+                                    <Frame Margin="10" >
+                                        <StackLayout HorizontalOptions="FillAndExpand"  >
+                                            <Picker x:Name="ListBrand" SelectedItem="{Binding Brand,Mode=TwoWay}"  HorizontalTextAlignment="Center"  Title="Brand"></Picker>
+
+                                            --><!--<Picker x:Name="ListModel" SelectedItem="{Binding Model,Mode=TwoWay}" HorizontalTextAlignment="Center" Title="Model"></Picker>--><!--
+
+                                        </StackLayout>
+                                    </Frame>
+
+
                                     <Label Text="{Binding Model}"
                                 HorizontalOptions="EndAndExpand"
                                 TextColor="#503026" />
                                 </StackLayout>
+                                
+                                
+                                
                             </StackLayout>
                         </ViewCell>
                     </DataTemplate>
                 </ListView.ItemTemplate>
-            </ListView>
+            </ListView>-->
 
         </ScrollView>
         

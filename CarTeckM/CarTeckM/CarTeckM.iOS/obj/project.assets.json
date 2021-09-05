@@ -121,6 +121,31 @@
           "build/Microsoft.NetCore.UniversalWindowsPlatform.targets": {}
         }
       },
+      "MonkeyCache/1.5.2": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "12.0.3"
+        },
+        "compile": {
+          "lib/xamarinios10/MonkeyCache.dll": {}
+        },
+        "runtime": {
+          "lib/xamarinios10/MonkeyCache.dll": {}
+        }
+      },
+      "MonkeyCache.FileStore/1.5.2": {
+        "type": "package",
+        "dependencies": {
+          "MonkeyCache": "1.5.2",
+          "Newtonsoft.Json": "12.0.3"
+        },
+        "compile": {
+          "lib/xamarinios10/MonkeyCache.FileStore.dll": {}
+        },
+        "runtime": {
+          "lib/xamarinios10/MonkeyCache.FileStore.dll": {}
+        }
+      },
       "Newtonsoft.Json/13.0.1": {
         "type": "package",
         "compile": {
@@ -289,7 +314,7 @@
           "lib/xamarinios10/Plugin.Media.dll": {}
         }
       },
-      "Xamarin.Essentials/1.6.1": {
+      "Xamarin.Essentials/1.7.0": {
         "type": "package",
         "dependencies": {
           "System.Numerics.Vectors": "4.5.0"
@@ -444,6 +469,21 @@
           "lib/Xamarin.iOS10/Xamarin.RangeSlider.Forms.iOS.dll": {}
         }
       },
+      "Xamarin.MediaGallery/1.0.2.1": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Essentials": "1.7.0"
+        },
+        "frameworkAssemblies": [
+          "System.Drawing.Common.dll"
+        ],
+        "compile": {
+          "lib/xamarinios10/NativeMedia.dll": {}
+        },
+        "runtime": {
+          "lib/xamarinios10/NativeMedia.dll": {}
+        }
+      },
       "Xamarin.RangeSlider/1.0.2": {
         "type": "package",
         "compile": {
@@ -461,14 +501,16 @@
         "dependencies": {
           "Microsoft.AspNetCore.Http": "2.2.2",
           "Microsoft.NETCore.UniversalWindowsPlatform": "6.2.12",
+          "MonkeyCache.FileStore": "1.5.2",
           "Newtonsoft.Json": "13.0.1",
           "Plugin.Toast": "2.2.0",
           "Rg.Plugins.Popup": "2.0.0.12",
           "System.Collections": "4.3.0",
           "Xam.Plugin.Media": "5.0.1",
-          "Xamarin.Essentials": "1.6.1",
+          "Xamarin.Essentials": "1.7.0",
           "Xamarin.Forms": "5.0.0.2012",
           "Xamarin.Forms.RangeSlider": "1.0.2",
+          "Xamarin.MediaGallery": "1.0.2.1",
           "sqlite-net-pcl": "1.7.335"
         },
         "compile": {
@@ -599,6 +641,31 @@
           "build/Microsoft.NetCore.UniversalWindowsPlatform.targets": {}
         }
       },
+      "MonkeyCache/1.5.2": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "12.0.3"
+        },
+        "compile": {
+          "lib/xamarinios10/MonkeyCache.dll": {}
+        },
+        "runtime": {
+          "lib/xamarinios10/MonkeyCache.dll": {}
+        }
+      },
+      "MonkeyCache.FileStore/1.5.2": {
+        "type": "package",
+        "dependencies": {
+          "MonkeyCache": "1.5.2",
+          "Newtonsoft.Json": "12.0.3"
+        },
+        "compile": {
+          "lib/xamarinios10/MonkeyCache.FileStore.dll": {}
+        },
+        "runtime": {
+          "lib/xamarinios10/MonkeyCache.FileStore.dll": {}
+        }
+      },
       "Newtonsoft.Json/13.0.1": {
         "type": "package",
         "compile": {
@@ -767,7 +834,7 @@
           "lib/xamarinios10/Plugin.Media.dll": {}
         }
       },
-      "Xamarin.Essentials/1.6.1": {
+      "Xamarin.Essentials/1.7.0": {
         "type": "package",
         "dependencies": {
           "System.Numerics.Vectors": "4.5.0"
@@ -922,6 +989,21 @@
           "lib/Xamarin.iOS10/Xamarin.RangeSlider.Forms.iOS.dll": {}
         }
       },
+      "Xamarin.MediaGallery/1.0.2.1": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Essentials": "1.7.0"
+        },
+        "frameworkAssemblies": [
+          "System.Drawing.Common.dll"
+        ],
+        "compile": {
+          "lib/xamarinios10/NativeMedia.dll": {}
+        },
+        "runtime": {
+          "lib/xamarinios10/NativeMedia.dll": {}
+        }
+      },
       "Xamarin.RangeSlider/1.0.2": {
         "type": "package",
         "compile": {
@@ -939,14 +1021,16 @@
         "dependencies": {
           "Microsoft.AspNetCore.Http": "2.2.2",
           "Microsoft.NETCore.UniversalWindowsPlatform": "6.2.12",
+          "MonkeyCache.FileStore": "1.5.2",
           "Newtonsoft.Json": "13.0.1",
           "Plugin.Toast": "2.2.0",
           "Rg.Plugins.Popup": "2.0.0.12",
           "System.Collections": "4.3.0",
           "Xam.Plugin.Media": "5.0.1",
-          "Xamarin.Essentials": "1.6.1",
+          "Xamarin.Essentials": "1.7.0",
           "Xamarin.Forms": "5.0.0.2012",
           "Xamarin.Forms.RangeSlider": "1.0.2",
+          "Xamarin.MediaGallery": "1.0.2.1",
           "sqlite-net-pcl": "1.7.335"
         },
         "compile": {
@@ -1077,6 +1161,31 @@
           "build/Microsoft.NetCore.UniversalWindowsPlatform.targets": {}
         }
       },
+      "MonkeyCache/1.5.2": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "12.0.3"
+        },
+        "compile": {
+          "lib/xamarinios10/MonkeyCache.dll": {}
+        },
+        "runtime": {
+          "lib/xamarinios10/MonkeyCache.dll": {}
+        }
+      },
+      "MonkeyCache.FileStore/1.5.2": {
+        "type": "package",
+        "dependencies": {
+          "MonkeyCache": "1.5.2",
+          "Newtonsoft.Json": "12.0.3"
+        },
+        "compile": {
+          "lib/xamarinios10/MonkeyCache.FileStore.dll": {}
+        },
+        "runtime": {
+          "lib/xamarinios10/MonkeyCache.FileStore.dll": {}
+        }
+      },
       "Newtonsoft.Json/13.0.1": {
         "type": "package",
         "compile": {
@@ -1245,7 +1354,7 @@
           "lib/xamarinios10/Plugin.Media.dll": {}
         }
       },
-      "Xamarin.Essentials/1.6.1": {
+      "Xamarin.Essentials/1.7.0": {
         "type": "package",
         "dependencies": {
           "System.Numerics.Vectors": "4.5.0"
@@ -1400,6 +1509,21 @@
           "lib/Xamarin.iOS10/Xamarin.RangeSlider.Forms.iOS.dll": {}
         }
       },
+      "Xamarin.MediaGallery/1.0.2.1": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Essentials": "1.7.0"
+        },
+        "frameworkAssemblies": [
+          "System.Drawing.Common.dll"
+        ],
+        "compile": {
+          "lib/xamarinios10/NativeMedia.dll": {}
+        },
+        "runtime": {
+          "lib/xamarinios10/NativeMedia.dll": {}
+        }
+      },
       "Xamarin.RangeSlider/1.0.2": {
         "type": "package",
         "compile": {
@@ -1417,14 +1541,16 @@
         "dependencies": {
           "Microsoft.AspNetCore.Http": "2.2.2",
           "Microsoft.NETCore.UniversalWindowsPlatform": "6.2.12",
+          "MonkeyCache.FileStore": "1.5.2",
           "Newtonsoft.Json": "13.0.1",
           "Plugin.Toast": "2.2.0",
           "Rg.Plugins.Popup": "2.0.0.12",
           "System.Collections": "4.3.0",
           "Xam.Plugin.Media": "5.0.1",
-          "Xamarin.Essentials": "1.6.1",
+          "Xamarin.Essentials": "1.7.0",
           "Xamarin.Forms": "5.0.0.2012",
           "Xamarin.Forms.RangeSlider": "1.0.2",
+          "Xamarin.MediaGallery": "1.0.2.1",
           "sqlite-net-pcl": "1.7.335"
         },
         "compile": {
@@ -1555,6 +1681,31 @@
           "build/Microsoft.NetCore.UniversalWindowsPlatform.targets": {}
         }
       },
+      "MonkeyCache/1.5.2": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "12.0.3"
+        },
+        "compile": {
+          "lib/xamarinios10/MonkeyCache.dll": {}
+        },
+        "runtime": {
+          "lib/xamarinios10/MonkeyCache.dll": {}
+        }
+      },
+      "MonkeyCache.FileStore/1.5.2": {
+        "type": "package",
+        "dependencies": {
+          "MonkeyCache": "1.5.2",
+          "Newtonsoft.Json": "12.0.3"
+        },
+        "compile": {
+          "lib/xamarinios10/MonkeyCache.FileStore.dll": {}
+        },
+        "runtime": {
+          "lib/xamarinios10/MonkeyCache.FileStore.dll": {}
+        }
+      },
       "Newtonsoft.Json/13.0.1": {
         "type": "package",
         "compile": {
@@ -1723,7 +1874,7 @@
           "lib/xamarinios10/Plugin.Media.dll": {}
         }
       },
-      "Xamarin.Essentials/1.6.1": {
+      "Xamarin.Essentials/1.7.0": {
         "type": "package",
         "dependencies": {
           "System.Numerics.Vectors": "4.5.0"
@@ -1878,6 +2029,21 @@
           "lib/Xamarin.iOS10/Xamarin.RangeSlider.Forms.iOS.dll": {}
         }
       },
+      "Xamarin.MediaGallery/1.0.2.1": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Essentials": "1.7.0"
+        },
+        "frameworkAssemblies": [
+          "System.Drawing.Common.dll"
+        ],
+        "compile": {
+          "lib/xamarinios10/NativeMedia.dll": {}
+        },
+        "runtime": {
+          "lib/xamarinios10/NativeMedia.dll": {}
+        }
+      },
       "Xamarin.RangeSlider/1.0.2": {
         "type": "package",
         "compile": {
@@ -1895,14 +2061,16 @@
         "dependencies": {
           "Microsoft.AspNetCore.Http": "2.2.2",
           "Microsoft.NETCore.UniversalWindowsPlatform": "6.2.12",
+          "MonkeyCache.FileStore": "1.5.2",
           "Newtonsoft.Json": "13.0.1",
           "Plugin.Toast": "2.2.0",
           "Rg.Plugins.Popup": "2.0.0.12",
           "System.Collections": "4.3.0",
           "Xam.Plugin.Media": "5.0.1",
-          "Xamarin.Essentials": "1.6.1",
+          "Xamarin.Essentials": "1.7.0",
           "Xamarin.Forms": "5.0.0.2012",
           "Xamarin.Forms.RangeSlider": "1.0.2",
+          "Xamarin.MediaGallery": "1.0.2.1",
           "sqlite-net-pcl": "1.7.335"
         },
         "compile": {
@@ -2321,6 +2489,90 @@
         "ref/uap10.0.15138/mscorlib.dll",
         "ref/uap10.0.15138/netstandard.dll",
         "runtime.json"
+      ]
+    },
+    "MonkeyCache/1.5.2": {
+      "sha512": "RdR4LyW7MemYfnQ1nNMfL7xZZFFKHUdF2TG7rd/sYDBQNcJ4sFSPK3YdaJleEKXGpova01cqdttFbXN+fE+FQg==",
+      "type": "package",
+      "path": "monkeycache/1.5.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/monoandroid71/MonkeyCache.dll",
+        "lib/monoandroid71/MonkeyCache.pdb",
+        "lib/monoandroid71/MonkeyCache.xml",
+        "lib/monoandroid80/MonkeyCache.dll",
+        "lib/monoandroid80/MonkeyCache.pdb",
+        "lib/monoandroid80/MonkeyCache.xml",
+        "lib/monoandroid81/MonkeyCache.dll",
+        "lib/monoandroid81/MonkeyCache.pdb",
+        "lib/monoandroid81/MonkeyCache.xml",
+        "lib/monoandroid90/MonkeyCache.dll",
+        "lib/monoandroid90/MonkeyCache.pdb",
+        "lib/monoandroid90/MonkeyCache.xml",
+        "lib/netstandard2.0/MonkeyCache.dll",
+        "lib/netstandard2.0/MonkeyCache.pdb",
+        "lib/netstandard2.0/MonkeyCache.xml",
+        "lib/uap10.0.16299/MonkeyCache.dll",
+        "lib/uap10.0.16299/MonkeyCache.pdb",
+        "lib/uap10.0.16299/MonkeyCache.pri",
+        "lib/uap10.0.16299/MonkeyCache.xml",
+        "lib/xamarinios10/MonkeyCache.dll",
+        "lib/xamarinios10/MonkeyCache.pdb",
+        "lib/xamarinios10/MonkeyCache.xml",
+        "lib/xamarinmac20/MonkeyCache.dll",
+        "lib/xamarinmac20/MonkeyCache.pdb",
+        "lib/xamarinmac20/MonkeyCache.xml",
+        "lib/xamarintvos10/MonkeyCache.dll",
+        "lib/xamarintvos10/MonkeyCache.pdb",
+        "lib/xamarintvos10/MonkeyCache.xml",
+        "lib/xamarinwatchos10/MonkeyCache.dll",
+        "lib/xamarinwatchos10/MonkeyCache.pdb",
+        "lib/xamarinwatchos10/MonkeyCache.xml",
+        "monkeycache.1.5.2.nupkg.sha512",
+        "monkeycache.nuspec"
+      ]
+    },
+    "MonkeyCache.FileStore/1.5.2": {
+      "sha512": "a/tpYXD+4T9IbDGHx9tCH+VHxocL1Sx/mrOWKbIRyjfeoAMLjP70qGqg+p1GGb/Mf4wNM/Fgcn65FaKl7Ir/NQ==",
+      "type": "package",
+      "path": "monkeycache.filestore/1.5.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/monoandroid71/MonkeyCache.FileStore.dll",
+        "lib/monoandroid71/MonkeyCache.FileStore.pdb",
+        "lib/monoandroid71/MonkeyCache.FileStore.xml",
+        "lib/monoandroid80/MonkeyCache.FileStore.dll",
+        "lib/monoandroid80/MonkeyCache.FileStore.pdb",
+        "lib/monoandroid80/MonkeyCache.FileStore.xml",
+        "lib/monoandroid81/MonkeyCache.FileStore.dll",
+        "lib/monoandroid81/MonkeyCache.FileStore.pdb",
+        "lib/monoandroid81/MonkeyCache.FileStore.xml",
+        "lib/monoandroid90/MonkeyCache.FileStore.dll",
+        "lib/monoandroid90/MonkeyCache.FileStore.pdb",
+        "lib/monoandroid90/MonkeyCache.FileStore.xml",
+        "lib/netstandard2.0/MonkeyCache.FileStore.dll",
+        "lib/netstandard2.0/MonkeyCache.FileStore.pdb",
+        "lib/netstandard2.0/MonkeyCache.FileStore.xml",
+        "lib/uap10.0.16299/MonkeyCache.FileStore.dll",
+        "lib/uap10.0.16299/MonkeyCache.FileStore.pdb",
+        "lib/uap10.0.16299/MonkeyCache.FileStore.pri",
+        "lib/uap10.0.16299/MonkeyCache.FileStore.xml",
+        "lib/xamarinios10/MonkeyCache.FileStore.dll",
+        "lib/xamarinios10/MonkeyCache.FileStore.pdb",
+        "lib/xamarinios10/MonkeyCache.FileStore.xml",
+        "lib/xamarinmac20/MonkeyCache.FileStore.dll",
+        "lib/xamarinmac20/MonkeyCache.FileStore.pdb",
+        "lib/xamarinmac20/MonkeyCache.FileStore.xml",
+        "lib/xamarintvos10/MonkeyCache.FileStore.dll",
+        "lib/xamarintvos10/MonkeyCache.FileStore.pdb",
+        "lib/xamarintvos10/MonkeyCache.FileStore.xml",
+        "lib/xamarinwatchos10/MonkeyCache.FileStore.dll",
+        "lib/xamarinwatchos10/MonkeyCache.FileStore.pdb",
+        "lib/xamarinwatchos10/MonkeyCache.FileStore.xml",
+        "monkeycache.filestore.1.5.2.nupkg.sha512",
+        "monkeycache.filestore.nuspec"
       ]
     },
     "Newtonsoft.Json/13.0.1": {
@@ -2826,10 +3078,10 @@
         "xam.plugin.media.nuspec"
       ]
     },
-    "Xamarin.Essentials/1.6.1": {
-      "sha512": "gG1Bp4j4bpJQ0dp9MeBJQJ9c8xULauIlhc7Cx5Qw4J2K1c+4Glq5n+gkb9Pm0UA/CevXVqLK5ZXmZkuYI52FgA==",
+    "Xamarin.Essentials/1.7.0": {
+      "sha512": "xfUJNxtfMC05VBej7fVUg6Zd9VwM2kqW9LH0tcrSA6IsBTl0EsIGkYUOz1BoKT2rseWW8o3kTi5WH/yZV4GgJw==",
       "type": "package",
-      "path": "xamarin.essentials/1.6.1",
+      "path": "xamarin.essentials/1.7.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -2838,15 +3090,6 @@
         "lib/monoandroid10.0/Xamarin.Essentials.dll",
         "lib/monoandroid10.0/Xamarin.Essentials.pdb",
         "lib/monoandroid10.0/Xamarin.Essentials.xml",
-        "lib/monoandroid80/Xamarin.Essentials.dll",
-        "lib/monoandroid80/Xamarin.Essentials.pdb",
-        "lib/monoandroid80/Xamarin.Essentials.xml",
-        "lib/monoandroid81/Xamarin.Essentials.dll",
-        "lib/monoandroid81/Xamarin.Essentials.pdb",
-        "lib/monoandroid81/Xamarin.Essentials.xml",
-        "lib/monoandroid90/Xamarin.Essentials.dll",
-        "lib/monoandroid90/Xamarin.Essentials.pdb",
-        "lib/monoandroid90/Xamarin.Essentials.xml",
         "lib/netstandard1.0/Xamarin.Essentials.dll",
         "lib/netstandard1.0/Xamarin.Essentials.pdb",
         "lib/netstandard1.0/Xamarin.Essentials.xml",
@@ -2873,7 +3116,7 @@
         "lib/xamarinwatchos10/Xamarin.Essentials.pdb",
         "lib/xamarinwatchos10/Xamarin.Essentials.xml",
         "readme.txt",
-        "xamarin.essentials.1.6.1.nupkg.sha512",
+        "xamarin.essentials.1.7.0.nupkg.sha512",
         "xamarin.essentials.nuspec"
       ]
     },
@@ -3112,6 +3355,27 @@
         "xamarin.forms.rangeslider.nuspec"
       ]
     },
+    "Xamarin.MediaGallery/1.0.2.1": {
+      "sha512": "khFCj4P2L5BzzEC623CsmZeHWAZ/IsuVZg7uSUfWlXNln0vYajIJWBpKqBwTZEBzcto84n2W6GXTGWgdu/PLfA==",
+      "type": "package",
+      "path": "xamarin.mediagallery/1.0.2.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "icon.png",
+        "lib/monoandroid10.0/NativeMedia.dll",
+        "lib/monoandroid10.0/Xamarin.MediaGallery.xml",
+        "lib/monoandroid11.0/NativeMedia.dll",
+        "lib/monoandroid11.0/Xamarin.MediaGallery.xml",
+        "lib/netstandard2.0/NativeMedia.dll",
+        "lib/netstandard2.0/Xamarin.MediaGallery.xml",
+        "lib/xamarinios10/NativeMedia.dll",
+        "lib/xamarinios10/Xamarin.MediaGallery.xml",
+        "xamarin.mediagallery.1.0.2.1.nupkg.sha512",
+        "xamarin.mediagallery.nuspec"
+      ]
+    },
     "Xamarin.RangeSlider/1.0.2": {
       "sha512": "ULCTx+8pNNWYPaingH1UwB/+G2sHF6b/FnM1ZHdggiLSe8gMl/qAqchVu3CnmIL4aAqOSdqZ4ZiXggCVn/ep+g==",
       "type": "package",
@@ -3154,14 +3418,16 @@
       "CarTeckM >= 1.0.0",
       "Microsoft.AspNetCore.Http >= 2.2.2",
       "Microsoft.NETCore.UniversalWindowsPlatform >= 6.2.12",
+      "MonkeyCache.FileStore >= 1.5.2",
       "Newtonsoft.Json >= 13.0.1",
       "Plugin.Toast >= 2.2.0",
       "Rg.Plugins.Popup >= 2.0.0.12",
       "System.Collections >= 4.3.0",
       "Xam.Plugin.Media >= 5.0.1",
-      "Xamarin.Essentials >= 1.6.1",
+      "Xamarin.Essentials >= 1.7.0",
       "Xamarin.Forms >= 5.0.0.2012",
       "Xamarin.Forms.RangeSlider >= 1.0.2",
+      "Xamarin.MediaGallery >= 1.0.2.1",
       "sqlite-net-pcl >= 1.7.335"
     ]
   },
@@ -3218,6 +3484,10 @@
             "target": "Package",
             "version": "[6.2.12, )"
           },
+          "MonkeyCache.FileStore": {
+            "target": "Package",
+            "version": "[1.5.2, )"
+          },
           "Newtonsoft.Json": {
             "target": "Package",
             "version": "[13.0.1, )"
@@ -3240,7 +3510,7 @@
           },
           "Xamarin.Essentials": {
             "target": "Package",
-            "version": "[1.6.1, )"
+            "version": "[1.7.0, )"
           },
           "Xamarin.Forms": {
             "target": "Package",
@@ -3249,6 +3519,10 @@
           "Xamarin.Forms.RangeSlider": {
             "target": "Package",
             "version": "[1.0.2, )"
+          },
+          "Xamarin.MediaGallery": {
+            "target": "Package",
+            "version": "[1.0.2.1, )"
           },
           "sqlite-net-pcl": {
             "target": "Package",

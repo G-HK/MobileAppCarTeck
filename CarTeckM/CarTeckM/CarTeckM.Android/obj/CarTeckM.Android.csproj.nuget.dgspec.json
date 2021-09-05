@@ -25,14 +25,14 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "monoandroid90"
+          "monoandroid11.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "monoandroid90": {
+          "monoandroid11.0": {
             "projectReferences": {
               "C:\\Users\\h_kad\\Documents\\GitHub\\MobileAppCarTeck\\CarTeckM\\CarTeckM\\CarTeckM\\CarTeckM.csproj": {
                 "projectPath": "C:\\Users\\h_kad\\Documents\\GitHub\\MobileAppCarTeck\\CarTeckM\\CarTeckM\\CarTeckM\\CarTeckM.csproj"
@@ -42,7 +42,7 @@
         }
       },
       "frameworks": {
-        "monoandroid90": {
+        "monoandroid11.0": {
           "dependencies": {
             "Microsoft.AspNetCore.Http": {
               "target": "Package",
@@ -51,6 +51,10 @@
             "Microsoft.NETCore.UniversalWindowsPlatform": {
               "target": "Package",
               "version": "[6.2.12, )"
+            },
+            "MonkeyCache.FileStore": {
+              "target": "Package",
+              "version": "[1.5.2, )"
             },
             "Newtonsoft.Json": {
               "target": "Package",
@@ -74,7 +78,7 @@
             },
             "Xamarin.Essentials": {
               "target": "Package",
-              "version": "[1.6.1, )"
+              "version": "[1.7.0, )"
             },
             "Xamarin.Forms": {
               "target": "Package",
@@ -83,6 +87,10 @@
             "Xamarin.Forms.RangeSlider": {
               "target": "Package",
               "version": "[1.0.2, )"
+            },
+            "Xamarin.MediaGallery": {
+              "target": "Package",
+              "version": "[1.0.2.1, )"
             },
             "sqlite-net-pcl": {
               "target": "Package",
@@ -142,6 +150,10 @@
               "target": "Package",
               "version": "[6.2.12, )"
             },
+            "MonkeyCache.FileStore": {
+              "target": "Package",
+              "version": "[1.5.2, )"
+            },
             "NETStandard.Library": {
               "suppressParent": "All",
               "target": "Package",
@@ -170,7 +182,7 @@
             },
             "Xamarin.Essentials": {
               "target": "Package",
-              "version": "[1.6.1, )"
+              "version": "[1.7.0, )"
             },
             "Xamarin.Forms": {
               "target": "Package",
@@ -179,6 +191,10 @@
             "Xamarin.Forms.RangeSlider": {
               "target": "Package",
               "version": "[1.0.2, )"
+            },
+            "Xamarin.MediaGallery": {
+              "target": "Package",
+              "version": "[1.0.2.1, )"
             },
             "sqlite-net-pcl": {
               "target": "Package",

@@ -11,11 +11,11 @@
                 <Label HorizontalOptions="End" Margin="0,0,20,0">Owner : GHK</Label>
 
 
-                <CarouselView x:Name="CarouselImage" HorizontalOptions="CenterAndExpand" HeightRequest="250" Margin="0" BackgroundColor="Gold" >
+                <CarouselView x:Name="CarouselImage" HorizontalOptions="CenterAndExpand" ItemsSource="{Binding Picture}"  HeightRequest="250" Margin="0" BackgroundColor="Gold" >
                     <CarouselView.ItemTemplate>
                         <DataTemplate>
-                            <ImageCell ImageSource="{Binding }"></ImageCell>
-                            <!--<Image Source="{Binding .}" ></Image> -->
+                            <!--<ImageCell ImageSource="{Binding }"></ImageCell>-->
+                            <Image Source="{Binding .}" ></Image> 
                         </DataTemplate>
                     </CarouselView.ItemTemplate>
                 </CarouselView>

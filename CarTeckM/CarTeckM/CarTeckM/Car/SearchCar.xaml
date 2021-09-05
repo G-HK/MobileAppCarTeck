@@ -3,20 +3,25 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:forms="clr-namespace:Xamarin.RangeSlider.Forms;assembly=Xamarin.RangeSlider.Forms" xmlns:local="clr-namespace:CarTeckM.Behaviors" xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              x:Class="CarTeckM.Car.SearchCar"
               xmlns:models="clr-namespace:CarTeckM.Models"
-             x:DataType="models:FilterCars">
+             x:DataType="models:FilterCars"
+             
+             BackgroundColor="{AppThemeBinding 
+                        Dark={StaticResource WindowBackgroundColorDark}, 
+                        Light={StaticResource WindowBackgroundColor}}">
     <ContentPage.Content>
         <Grid>
             <Grid.RowDefinitions>
                 <RowDefinition Height="*" />
             </Grid.RowDefinitions>
 
-            <ScrollView Grid.Row="0">
-                <StackLayout HorizontalOptions="FillAndExpand" BackgroundColor="AliceBlue" Padding="0,10,0,100" >
+            <ScrollView Grid.Row="0" >
+                <StackLayout HorizontalOptions="FillAndExpand"  Padding="0,10,0,100" Style="{DynamicResource Stack }">
 
-                    <Label HorizontalOptions="Center" Text="Brand &amp; Model" Margin="0,10,0,0"></Label>
-                    <Frame Margin="10">
-                        <StackLayout HorizontalOptions="FillAndExpand" >
-                            <Picker x:Name="ListMerk" SelectedItem="{Binding Brand,Mode=TwoWay}" HorizontalTextAlignment="Center"  Title="Merk"></Picker>
+                    <Label HorizontalOptions="Center" Text="Brand &amp; Model" Margin="0,10,0,0" Style="{DynamicResource BaseLabel}"></Label>
+                    
+                    <Frame Margin="10" >
+                        <StackLayout HorizontalOptions="FillAndExpand"  >
+                            <Picker x:Name="ListMerk" SelectedItem="{Binding Brand,Mode=TwoWay}"  HorizontalTextAlignment="Center"  Title="Merk"></Picker>
                             
                             <!--<Picker x:Name="ListModel" SelectedItem="{Binding Model,Mode=TwoWay}" HorizontalTextAlignment="Center" Title="Model"></Picker>-->
                             
@@ -24,7 +29,7 @@
                     </Frame>
                     <!--<Button Text="+ Meer Merken Toevoegen" x:Name="ShowMerken" BackgroundColor="Transparent" Clicked="ShowMerken_Clicked" TextColor="OrangeRed"></Button>-->
 
-                    <Label HorizontalOptions="Center" Text="BodyType"></Label>
+                    <Label HorizontalOptions="Center" Text="BodyType" Style="{DynamicResource BaseLabel}"></Label>
                     <Picker x:Name="PkrBodyType" Title="CarrosieVorm" SelectedItem="{Binding BodyType}" HorizontalTextAlignment="Center" BackgroundColor="White">
                         <Picker.Items>
                             <x:String>Any</x:String>
@@ -40,12 +45,12 @@
 
                     </Picker>
 
-                    <Label HorizontalTextAlignment="Center" Text="Pijs"></Label>
+                    <Label HorizontalTextAlignment="Center" Text="Pijs" Style="{DynamicResource BaseLabel}"></Label>
                     <Frame>
                         <StackLayout>
                             <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
                                 <Entry x:Name="BeginPrice" WidthRequest="100" Keyboard="Numeric" Text="{Binding LowerPrice, TargetNullValue='0' }"  IsEnabled="False" PropertyChanged="BeginPrice_PropertyChanged"></Entry>
-                                <Label Text="from"></Label>
+                                <Label Text="from" Style="{DynamicResource BaseLabel}"></Label>
 
                                 <Entry x:Name="EndPrice" WidthRequest="100" Keyboard="Numeric" Text="{Binding UpperPrice, TargetNullValue='5'}" IsEnabled="false"  PropertyChanged="EndPrice_PropertyChanged" >
                                 </Entry>
@@ -54,13 +59,13 @@
                         </StackLayout>
                     </Frame>
 
-                    <Label HorizontalTextAlignment="Center" Text="BouwJaar"></Label>
+                    <Label HorizontalTextAlignment="Center" Text="BouwJaar" Style="{DynamicResource BaseLabel}"></Label>
                     <Frame>
                         <StackLayout>
                             <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
                                 <Picker x:Name="BeginYearList" SelectedItem="{Binding BeginBuildYear}" WidthRequest="60" />
 
-                                <Label Text="from"></Label>
+                                <Label Text="from" ></Label>
                                 <Picker x:Name="EndYearList" SelectedItem="{Binding EndBuildYear}" WidthRequest="60"/>
                             </StackLayout>
                         </StackLayout>
@@ -84,7 +89,7 @@
                         </StackLayout>
                     </Frame>
 
-                    <Label HorizontalTextAlignment="Center" Text="Vermogen"></Label>
+                    <Label HorizontalTextAlignment="Center" Style="{DynamicResource BaseLabel}" Text="Vermogen"></Label>
                     <Frame>
                         <StackLayout HorizontalOptions="Center" Orientation="Horizontal">
 
@@ -99,7 +104,7 @@
                         </StackLayout>
                     </Frame>
 
-                    <Label HorizontalTextAlignment="Center" Text="Brandstof"></Label>
+                    <Label HorizontalTextAlignment="Center" Style="{DynamicResource BaseLabel}" Text="Brandstof"></Label>
                     <Frame>
                         <StackLayout HorizontalOptions="Center" Orientation="Horizontal">
                             <Picker x:Name="FuelPicker" HorizontalTextAlignment="Center" SelectedIndex="{Binding FuelType}" WidthRequest="100">
@@ -118,7 +123,7 @@
                         </StackLayout>
                     </Frame>
 
-                    <Label HorizontalTextAlignment="Center" Text="Transmissie"></Label>
+                    <Label HorizontalTextAlignment="Center" Style="{DynamicResource BaseLabel}" Text="Transmissie"></Label>
                     <Frame>
                         <StackLayout HorizontalOptions="Center" Orientation="Horizontal">
                             <Picker x:Name="GearBoxPicker" SelectedItem="{Binding Transmission}" HorizontalTextAlignment="Center" WidthRequest="200" SelectedIndex="1">
@@ -139,7 +144,7 @@
                 </StackLayout>
             </ScrollView>
 
-            <Button Grid.Row="0" x:Name="SearchButton" Clicked="SearchButton_Clicked" HorizontalOptions="Center" BorderRadius="40" BorderColor="Black" BorderWidth="1" Margin="0,0,0,20" WidthRequest="200" HeightRequest="55" Text="Search" VerticalOptions="End" BackgroundColor="Yellow"/>
+            <Button Grid.Row="0" TextColor="Black" x:Name="SearchButton" Clicked="SearchButton_Clicked" HorizontalOptions="Center" BorderRadius="40" BorderColor="Black" BorderWidth="1" Margin="0,0,0,20" WidthRequest="200" HeightRequest="55" Text="Search" VerticalOptions="End" BackgroundColor="Yellow"/>
 
         </Grid>
     </ContentPage.Content>

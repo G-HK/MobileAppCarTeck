@@ -2,9 +2,11 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              x:Class="CarTeckM.MasterDetail.MDPMaster"
-             Title="Master">
+             Title="Master"
+               
+             >
     <StackLayout >
-    <ListView x:Name="MenuItemsListView"
+    <ListView x:Name="MenuItemsListView" Style="{DynamicResource CarListView}"
               SeparatorVisibility="None"
               HasUnevenRows="true"
               ItemsSource="{Binding MenuItems}"
@@ -21,10 +23,11 @@
             <RowDefinition Height="auto"/>
             <RowDefinition Height="25"/>
           </Grid.RowDefinitions>
+            
                     <Image Aspect="Fill" Grid.Column="0" Grid.Row="0" Source="CarTeckLogo.png" Margin="10,0,0,0" x:Name="logoApp"  VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"></Image>
-                    <Label Grid.Column="1" Grid.Row="0" x:Name="UserNamelbl" Text="NameUser"  VerticalTextAlignment="Center" HorizontalTextAlignment="Center" ></Label>
+                    <Label Grid.Column="1" Grid.Row="0" Style="{DynamicResource BaseLabel}"  x:Name="UserNamelbl" Text="NameUser"  VerticalTextAlignment="Center" HorizontalTextAlignment="Center" ></Label>
 
-                    <Frame CornerRadius="60"   Grid.Column="1" Grid.Row="1"    HeightRequest="120"   BackgroundColor="Red"  Padding="0">
+                    <Frame CornerRadius="60"  Style="{DynamicResource CarCard}"   Grid.Column="1" Grid.Row="1"    HeightRequest="120"   BackgroundColor="Red"  Padding="0">
                         
                         <Image Source="NoImageAvailable.png"  BackgroundColor="Black"  x:Name="profileImage"  VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"></Image>
 

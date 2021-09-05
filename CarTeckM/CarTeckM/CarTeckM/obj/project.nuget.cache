@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "tgcBz4ZepleDzvpnPBsbdwMXP9hJsgFoV2Z+0md8B+oATmCCCqoMGRojoqkcdgFz6lBj7zE8/zuGPmR7tvQ4tw==",
+  "dgSpecHash": "Y8W8kzzDgUZRj0XGjfeSbEE4NV5oO+8KfBrReaxRR1plyyVlrSiK5mSX4y796A6oseowLruwYHRa8vfxMKHumA==",
   "success": true,
   "projectFilePath": "C:\\Users\\h_kad\\Documents\\GitHub\\MobileAppCarTeck\\CarTeckM\\CarTeckM\\CarTeckM\\CarTeckM.csproj",
   "expectedPackageFiles": [
@@ -16,6 +16,8 @@
     "C:\\Users\\h_kad\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\h_kad\\.nuget\\packages\\microsoft.netcore.targets\\1.1.0\\microsoft.netcore.targets.1.1.0.nupkg.sha512",
     "C:\\Users\\h_kad\\.nuget\\packages\\microsoft.netcore.universalwindowsplatform\\6.2.12\\microsoft.netcore.universalwindowsplatform.6.2.12.nupkg.sha512",
+    "C:\\Users\\h_kad\\.nuget\\packages\\monkeycache\\1.5.2\\monkeycache.1.5.2.nupkg.sha512",
+    "C:\\Users\\h_kad\\.nuget\\packages\\monkeycache.filestore\\1.5.2\\monkeycache.filestore.1.5.2.nupkg.sha512",
     "C:\\Users\\h_kad\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
     "C:\\Users\\h_kad\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
     "C:\\Users\\h_kad\\.nuget\\packages\\plugin.toast\\2.2.0\\plugin.toast.2.2.0.nupkg.sha512",
@@ -34,9 +36,10 @@
     "C:\\Users\\h_kad\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.5.2\\system.runtime.compilerservices.unsafe.4.5.2.nupkg.sha512",
     "C:\\Users\\h_kad\\.nuget\\packages\\system.text.encodings.web\\4.5.0\\system.text.encodings.web.4.5.0.nupkg.sha512",
     "C:\\Users\\h_kad\\.nuget\\packages\\xam.plugin.media\\5.0.1\\xam.plugin.media.5.0.1.nupkg.sha512",
-    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\xamarin.essentials\\1.6.1\\xamarin.essentials.1.6.1.nupkg.sha512",
+    "C:\\Users\\h_kad\\.nuget\\packages\\xamarin.essentials\\1.7.0\\xamarin.essentials.1.7.0.nupkg.sha512",
     "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\xamarin.forms\\5.0.0.2012\\xamarin.forms.5.0.0.2012.nupkg.sha512",
     "C:\\Users\\h_kad\\.nuget\\packages\\xamarin.forms.rangeslider\\1.0.2\\xamarin.forms.rangeslider.1.0.2.nupkg.sha512",
+    "C:\\Users\\h_kad\\.nuget\\packages\\xamarin.mediagallery\\1.0.2.1\\xamarin.mediagallery.1.0.2.1.nupkg.sha512",
     "C:\\Users\\h_kad\\.nuget\\packages\\xamarin.rangeslider\\1.0.2\\xamarin.rangeslider.1.0.2.nupkg.sha512"
   ],
   "logs": []
