@@ -25,6 +25,7 @@ namespace CarTeckM.MasterDetail
                 return;
 
             var page = (Page)Activator.CreateInstance(item.TargetType);
+
             page.Title = item.Title;
             //page.IconImageSource = item.IconSource;
 

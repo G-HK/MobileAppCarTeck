@@ -10,6 +10,7 @@ namespace CarTeckM.Models
     {
         public event PropertyChangedEventHandler PropertyChanged;
 
+   
         public string ID { get; set; }
 
         [Required(ErrorMessage = "You should provide a Username value.")]

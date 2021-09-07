@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "Y8W8kzzDgUZRj0XGjfeSbEE4NV5oO+8KfBrReaxRR1plyyVlrSiK5mSX4y796A6oseowLruwYHRa8vfxMKHumA==",
+  "dgSpecHash": "l/bxXNBbvZjO8NQ64aquWeeMa2DtWS/1nK1h7argw0YzaRF4gCpiNLh9kQNkOahifAD97TaOIgQwYf/MwsksSw==",
   "success": true,
   "projectFilePath": "C:\\Users\\h_kad\\Documents\\GitHub\\MobileAppCarTeck\\CarTeckM\\CarTeckM\\CarTeckM\\CarTeckM.csproj",
   "expectedPackageFiles": [
@@ -21,6 +21,7 @@
     "C:\\Users\\h_kad\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
     "C:\\Users\\h_kad\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
     "C:\\Users\\h_kad\\.nuget\\packages\\plugin.toast\\2.2.0\\plugin.toast.2.2.0.nupkg.sha512",
+    "C:\\Users\\h_kad\\.nuget\\packages\\refractored.mvvmhelpers\\1.6.2\\refractored.mvvmhelpers.1.6.2.nupkg.sha512",
     "C:\\Users\\h_kad\\.nuget\\packages\\rg.plugins.popup\\2.0.0.12\\rg.plugins.popup.2.0.0.12.nupkg.sha512",
     "C:\\Users\\h_kad\\.nuget\\packages\\sqlite-net-pcl\\1.7.335\\sqlite-net-pcl.1.7.335.nupkg.sha512",
     "C:\\Users\\h_kad\\.nuget\\packages\\sqlitepclraw.bundle_green\\2.0.3\\sqlitepclraw.bundle_green.2.0.3.nupkg.sha512",
@@ -35,6 +36,7 @@
     "C:\\Users\\h_kad\\.nuget\\packages\\system.runtime\\4.3.0\\system.runtime.4.3.0.nupkg.sha512",
     "C:\\Users\\h_kad\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.5.2\\system.runtime.compilerservices.unsafe.4.5.2.nupkg.sha512",
     "C:\\Users\\h_kad\\.nuget\\packages\\system.text.encodings.web\\4.5.0\\system.text.encodings.web.4.5.0.nupkg.sha512",
+    "C:\\Users\\h_kad\\.nuget\\packages\\system.valuetuple\\4.5.0\\system.valuetuple.4.5.0.nupkg.sha512",
     "C:\\Users\\h_kad\\.nuget\\packages\\xam.plugin.media\\5.0.1\\xam.plugin.media.5.0.1.nupkg.sha512",
     "C:\\Users\\h_kad\\.nuget\\packages\\xamarin.essentials\\1.7.0\\xamarin.essentials.1.7.0.nupkg.sha512",
     "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\xamarin.forms\\5.0.0.2012\\xamarin.forms.5.0.0.2012.nupkg.sha512",

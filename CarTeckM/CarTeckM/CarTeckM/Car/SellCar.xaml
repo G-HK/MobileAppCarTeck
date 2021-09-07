@@ -29,7 +29,7 @@
 
                 <StackLayout Orientation="Horizontal" Margin="5,10">
                     <Label Text="Model:" FontSize="18"  Style="{DynamicResource LabelMedium}"></Label>
-                    <Entry Placeholder="Model" x:Name="modelEntry" Style="{DynamicResource BaseEntry}"   HorizontalTextAlignment="Center" IsEnabled="False"  HorizontalOptions="FillAndExpand" Margin="5,0,0,0" Keyboard="Text" Text="GreatKing"></Entry>
+                    <Entry Placeholder="Model" x:Name="modelEntry" Style="{DynamicResource BaseEntry}"   HorizontalTextAlignment="Center"   HorizontalOptions="FillAndExpand" Margin="5,0,0,0" Keyboard="Text" Text="335"></Entry>
                 </StackLayout>
 
                 <Label HorizontalTextAlignment="Center" Style="{DynamicResource BaseLabel}" Text="Transmissie"></Label>
@@ -86,23 +86,37 @@
 
                 <StackLayout Orientation="Horizontal" Margin="5,10">
                     <Label Text="Price:" FontSize="18"  Style="{DynamicResource LabelMedium}"></Label>
-                    <Entry Placeholder="Model" x:Name="priceEntry" Style="{DynamicResource BaseEntry}"   HorizontalTextAlignment="Center" IsEnabled="False"  HorizontalOptions="FillAndExpand" Margin="5,0,0,0" Keyboard="Text" Text="GreatKing"></Entry>
+                    <Entry Placeholder="Model" x:Name="priceEntry" Text="1500" Style="{DynamicResource BaseEntry}"   HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand" Margin="5,0,0,0" Keyboard="Numeric" ></Entry>
                 </StackLayout>
 
                 <StackLayout Orientation="Horizontal" Margin="5,10">
                     <Label Text="Range:" FontSize="18"  Style="{DynamicResource LabelMedium}"></Label>
-                    <Entry Placeholder="911" x:Name="RangeEntry" Style="{DynamicResource BaseEntry}"   HorizontalTextAlignment="Center" IsEnabled="False"  HorizontalOptions="FillAndExpand" Margin="5,0,0,0" Keyboard="Text" Text="GreatKing"></Entry>
+                    <Entry Placeholder="911" x:Name="RangeEntry" Style="{DynamicResource BaseEntry}"   HorizontalTextAlignment="Center"   HorizontalOptions="FillAndExpand" Margin="5,0,0,0" Keyboard="Numeric" Text="90000"></Entry>
                 </StackLayout>
 
                 <StackLayout Orientation="Horizontal" Margin="5,10">
                     <Label Text="Color:" FontSize="18"  Style="{DynamicResource LabelMedium}"></Label>
-                    <Entry Placeholder="color" x:Name="ColorEntry" Style="{DynamicResource BaseEntry}"   HorizontalTextAlignment="Center" IsEnabled="False"  HorizontalOptions="FillAndExpand" Margin="5,0,0,0" Keyboard="Text" Text="GreatKing"></Entry>
+                    <Entry Placeholder="color" x:Name="ColorEntry" Style="{DynamicResource BaseEntry}"   HorizontalTextAlignment="Center"   HorizontalOptions="FillAndExpand" Margin="5,0,0,0" Keyboard="Text" Text="Red"></Entry>
                 </StackLayout>
 
                 <StackLayout Orientation="Horizontal" Margin="5,10">
                     <Label Text="Power:" FontSize="18"  Style="{DynamicResource LabelMedium}"></Label>
-                    <Entry Placeholder="Power" x:Name="PowerEntry" Style="{DynamicResource BaseEntry}"   HorizontalTextAlignment="Center" IsEnabled="False"  HorizontalOptions="FillAndExpand" Margin="5,0,0,0" Keyboard="Text" Text="GreatKing"></Entry>
+                    <Entry Placeholder="Power" x:Name="PowerEntry" Style="{DynamicResource BaseEntry}"   HorizontalTextAlignment="Center"   HorizontalOptions="FillAndExpand" Margin="5,0,0,0" Keyboard="Numeric" Text="250"></Entry>
                 </StackLayout>
+
+                <StackLayout Orientation="Horizontal" Margin="5,10">
+                    <Label Text="BuildYear" FontSize="18"  Style="{DynamicResource LabelMedium}"></Label>
+                    <Entry Placeholder="Year" x:Name="BluidEntry" Style="{DynamicResource BaseEntry}"   HorizontalTextAlignment="Center"   HorizontalOptions="FillAndExpand" Margin="5,0,0,0" Keyboard="Numeric" Text="250"></Entry>
+                </StackLayout>
+
+                <StackLayout Orientation="Vertical" Margin="5,10">
+                    <Label Text="Description:" FontSize="18"  Style="{DynamicResource LabelMedium}"></Label>
+                    <Entry Placeholder="...." x:Name="DesEntry" Style="{DynamicResource BaseEntry}" HeightRequest="200"  WidthRequest="200"  HorizontalTextAlignment="Center"   HorizontalOptions="FillAndExpand" Margin="5,0,0,0" Keyboard="Text" Text="Hello Car"></Entry>
+                </StackLayout>
+
+                <Button HeightRequest="80" WidthRequest="150" x:Name="SellCarbtn" Clicked="SellCarbtn_Clicked"
+                        Text="SellCar" Style="{DynamicResource ButtonOutline}"></Button>
+                
 
             </StackLayout>
             

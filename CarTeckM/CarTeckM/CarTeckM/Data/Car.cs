@@ -29,7 +29,7 @@ namespace CarTeckM.Data
         [Required]
         public string FuelType { get; set; }
 
-        public char Currency { get; set; }
+        public string Currency { get; set; }
 
         //  [Required]
         [System.ComponentModel.DataAnnotations.Schema.Column(TypeName = "decimal(18, 2)")]
@@ -46,7 +46,7 @@ namespace CarTeckM.Data
 
         public string Torque { get; set; }
 
-        public string Power { get; set; } // Kw/Pk
+        public int Power { get; set; } // Kw/Pk
 
         public string Doors { get; set; }
 

@@ -18,12 +18,12 @@ namespace CarTeckM.Models
         public char Currency { get; set; }
 
         public decimal LowerPrice { get; set; } = 0;
-        public decimal UpperPrice { get; set; }
+        public decimal UpperPrice { get; set; } = decimal.MaxValue;
 
         public string Color { get; set; }
 
         public string RangeType { get; set; } //KM or Mile
-        public int UpperRange { get; set; }
+        public int UpperRange { get; set; } = int.MaxValue;
         public int LowerRange { get; set; } = 0;
 
 

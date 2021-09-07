@@ -21,7 +21,7 @@
                     
                     <Frame Margin="10" >
                         <StackLayout HorizontalOptions="FillAndExpand"  >
-                            <Picker x:Name="ListMerk" SelectedItem="{Binding Brand,Mode=TwoWay}"  HorizontalTextAlignment="Center"  Title="Merk"></Picker>
+                            <Picker x:Name="ListBrand" SelectedItem="{Binding Brand,Mode=TwoWay}"  HorizontalTextAlignment="Center"  Title="Merk"></Picker>
                             
                             <!--<Picker x:Name="ListModel" SelectedItem="{Binding Model,Mode=TwoWay}" HorizontalTextAlignment="Center" Title="Model"></Picker>-->
                             
@@ -30,7 +30,7 @@
                     <!--<Button Text="+ Meer Merken Toevoegen" x:Name="ShowMerken" BackgroundColor="Transparent" Clicked="ShowMerken_Clicked" TextColor="OrangeRed"></Button>-->
 
                     <Label HorizontalOptions="Center" Text="BodyType" Style="{DynamicResource BaseLabel}"></Label>
-                    <Picker x:Name="PkrBodyType" Title="CarrosieVorm" SelectedItem="{Binding BodyType}" HorizontalTextAlignment="Center" BackgroundColor="White">
+                    <Picker x:Name="PkrBodyType" Title="CarrosieVorm" SelectedItem="{Binding BodyType,Mode=TwoWay}" HorizontalTextAlignment="Center" BackgroundColor="White">
                         <Picker.Items>
                             <x:String>Any</x:String>
                             <x:String>HatchBack</x:String>
@@ -49,10 +49,10 @@
                     <Frame>
                         <StackLayout>
                             <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
-                                <Entry x:Name="BeginPrice" WidthRequest="100" Keyboard="Numeric" Text="{Binding LowerPrice, TargetNullValue='0' }"  IsEnabled="False" PropertyChanged="BeginPrice_PropertyChanged"></Entry>
+                                <Entry x:Name="BeginPrice" WidthRequest="100" Keyboard="Numeric" Text="{Binding LowerPrice,Mode=TwoWay, TargetNullValue='0' }"  IsEnabled="False" PropertyChanged="BeginPrice_PropertyChanged"></Entry>
                                 <Label Text="from" Style="{DynamicResource BaseLabel}"></Label>
 
-                                <Entry x:Name="EndPrice" WidthRequest="100" Keyboard="Numeric" Text="{Binding UpperPrice, TargetNullValue='5'}" IsEnabled="false"  PropertyChanged="EndPrice_PropertyChanged" >
+                                <Entry x:Name="EndPrice" WidthRequest="100" Keyboard="Numeric" Text="{Binding UpperPrice,Mode=TwoWay, TargetNullValue='50000'}" IsEnabled="false"  PropertyChanged="EndPrice_PropertyChanged" >
                                 </Entry>
                             </StackLayout>
                             <forms:RangeSlider  x:Name="sliderPrice" MinimumValue="0" LowerValue="0" StepValue="1000"  LowerValueChanged="sliderPrice_LowerValueChanged" UpperValueChanged="sliderPrice_UpperValueChanged"  MaximumValue="50000" UpperValue="50000" ShowTextAboveThumbs="True" ></forms:RangeSlider>
@@ -63,24 +63,24 @@
                     <Frame>
                         <StackLayout>
                             <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
-                                <Picker x:Name="BeginYearList" SelectedItem="{Binding BeginBuildYear}" WidthRequest="60" />
+                                <Picker x:Name="BeginYearList" SelectedItem="{Binding BeginBuildYear,Mode=TwoWay}" WidthRequest="60" />
 
                                 <Label Text="from" ></Label>
-                                <Picker x:Name="EndYearList" SelectedItem="{Binding EndBuildYear}" WidthRequest="60"/>
+                                <Picker x:Name="EndYearList" SelectedItem="{Binding EndBuildYear,Mode=TwoWay}" WidthRequest="60"/>
                             </StackLayout>
                         </StackLayout>
                     </Frame>
 
-                    <Label HorizontalTextAlignment="Center" Text="Kilometerstand"></Label>
+                    <Label HorizontalTextAlignment="Center" Text="Kilometerstand"  Style="{DynamicResource BaseLabel}"  ></Label>
                     <Frame>
                         <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
-                            <Entry x:Name="RangeLowerLimit" WidthRequest="80" Text="{Binding LowerRange}" Keyboard="Numeric" HorizontalTextAlignment="Center" >
+                            <Entry x:Name="RangeLowerLimit" WidthRequest="80" Text="{Binding LowerRange,Mode=TwoWay}" Keyboard="Numeric" HorizontalTextAlignment="Center" >
                                 <Entry.Behaviors>
                                     <local:NumericEntry/>
                                 </Entry.Behaviors>
                             </Entry>
                             <Label>tot</Label>
-                            <Entry x:Name="RangeUpperLimit" WidthRequest="80" Text="{Binding UpperRange}" Keyboard="Numeric"  HorizontalTextAlignment="Center">
+                            <Entry x:Name="RangeUpperLimit" WidthRequest="80" Text="{Binding UpperRange,Mode=TwoWay}" Keyboard="Numeric"  HorizontalTextAlignment="Center">
                                 <Entry.Behaviors>
                                     <local:NumericEntry/>
                                 </Entry.Behaviors>
@@ -93,11 +93,11 @@
                     <Frame>
                         <StackLayout HorizontalOptions="Center" Orientation="Horizontal">
 
-                            <Entry x:Name="PkLowerEntry" Keyboard="Numeric" Text="{ Binding LowerPower, TargetNullValue='0'}" WidthRequest="80" HorizontalTextAlignment="Center"></Entry>
+                            <Entry x:Name="PkLowerEntry" Keyboard="Numeric" Text="{ Binding LowerPower,Mode=TwoWay, TargetNullValue='0'}" WidthRequest="80" HorizontalTextAlignment="Center"></Entry>
 
                             <Label>tot</Label>
-                            
-                            <Entry x:Name="PkUpperEntry" Keyboard="Numeric" Text="{ Binding UpperPower, StringFormat='0:C2', TargetNullValue='0' }" WidthRequest="80" HorizontalTextAlignment="Center"></Entry>
+
+                            <Entry x:Name="PkUpperEntry" Keyboard="Numeric" Text="{ Binding UpperPower,Mode=TwoWay, StringFormat='0:C2', TargetNullValue='0' }" WidthRequest="80" HorizontalTextAlignment="Center"></Entry>
                             
                             
 
@@ -107,7 +107,7 @@
                     <Label HorizontalTextAlignment="Center" Style="{DynamicResource BaseLabel}" Text="Brandstof"></Label>
                     <Frame>
                         <StackLayout HorizontalOptions="Center" Orientation="Horizontal">
-                            <Picker x:Name="FuelPicker" HorizontalTextAlignment="Center" SelectedIndex="{Binding FuelType}" WidthRequest="100">
+                            <Picker x:Name="FuelPicker" HorizontalTextAlignment="Center" SelectedIndex="{Binding FuelType,Mode=TwoWay}" WidthRequest="100">
                                 <Picker.Items>
                                     <x:String>Any</x:String>
                                     <x:String>Diesel</x:String>
@@ -126,7 +126,7 @@
                     <Label HorizontalTextAlignment="Center" Style="{DynamicResource BaseLabel}" Text="Transmissie"></Label>
                     <Frame>
                         <StackLayout HorizontalOptions="Center" Orientation="Horizontal">
-                            <Picker x:Name="GearBoxPicker" SelectedItem="{Binding Transmission}" HorizontalTextAlignment="Center" WidthRequest="200" SelectedIndex="1">
+                            <Picker x:Name="GearBoxPicker" SelectedItem="{Binding Transmission,Mode=TwoWay}" HorizontalTextAlignment="Center" WidthRequest="200" SelectedIndex="1">
                                 <Picker.Items>
                                     <x:String>Any</x:String>
                                     <x:String>Manual</x:String>

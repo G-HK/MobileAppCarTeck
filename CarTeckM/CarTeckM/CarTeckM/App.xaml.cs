@@ -12,15 +12,20 @@ namespace CarTeckM
 {
     public partial class App : Application
     {
-        
+        ICRTKDatabase cr ;
         public App()
         {
             InitializeComponent();
 
             Barrel.ApplicationId = AppInfo.PackageName;
 
+            //cr = DependencyService.Get<ICRTKDatabase>();
+          
+           
+
 
             MainPage = new MDP();
+
         }
 
         protected override void OnStart()

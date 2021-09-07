@@ -650,3 +650,5 @@ C:\Users\h_kad\Documents\GitHub\MobileAppCarTeck\CarTeckM\CarTeckM\CarTeckM.Andr
 C:\Users\h_kad\Documents\GitHub\MobileAppCarTeck\CarTeckM\CarTeckM\CarTeckM.Android\obj\Debug\110\lp\90\jl\files.cache
 C:\Users\h_kad\Documents\GitHub\MobileAppCarTeck\CarTeckM\CarTeckM\CarTeckM.Android\obj\Debug\110\android\assets\NativeMedia.dll
 C:\Users\h_kad\Documents\GitHub\MobileAppCarTeck\CarTeckM\CarTeckM\CarTeckM.Android\obj\Debug\110\android\src\androidx\lifecycle\runtime\R.java
+C:\Users\h_kad\Documents\GitHub\MobileAppCarTeck\CarTeckM\CarTeckM\CarTeckM.Android\obj\Debug\110\android\assets\MvvmHelpers.dll
+C:\Users\h_kad\Documents\GitHub\MobileAppCarTeck\CarTeckM\CarTeckM\CarTeckM.Android\obj\Debug\110\android\assets\MvvmHelpers.pdb

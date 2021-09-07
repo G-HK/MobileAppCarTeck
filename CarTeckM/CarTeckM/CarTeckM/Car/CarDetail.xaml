@@ -2,8 +2,8 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="CarTeckM.Car.CarDetail"
-             xmlns:models="clr-namespace:CarTeckM.Models"
-             x:DataType="models:CarDto"
+             xmlns:models="clr-namespace:CarTeckM.Data"
+             x:DataType="models:Car"
             >
     <ContentPage.Content>
         <ScrollView>
@@ -11,35 +11,36 @@
                 <Label HorizontalOptions="End" Margin="0,0,20,0">Owner : GHK</Label>
 
 
-                <CarouselView x:Name="CarouselImage" HorizontalOptions="CenterAndExpand" ItemsSource="{Binding Picture}"  HeightRequest="250" Margin="0" BackgroundColor="Gold" >
+                <!--<CarouselView x:Name="CarouselImage" HorizontalOptions="CenterAndExpand" ItemsSource="{Binding Picture}"  HeightRequest="250" Margin="0" BackgroundColor="Gold" >
                     <CarouselView.ItemTemplate>
                         <DataTemplate>
-                            <!--<ImageCell ImageSource="{Binding }"></ImageCell>-->
+                            --><!--<ImageCell ImageSource="{Binding }"></ImageCell>--><!--
                             <Image Source="{Binding .}" ></Image> 
                         </DataTemplate>
                     </CarouselView.ItemTemplate>
-                </CarouselView>
+                </CarouselView>-->
+                <Image Source="{Binding Picture}" HorizontalOptions="CenterAndExpand"  HeightRequest="250" Margin="0" ></Image>
 
                 <StackLayout Orientation="Horizontal"  BackgroundColor="Gray">
                     <StackLayout HorizontalOptions="StartAndExpand" Padding="0" Margin="0">
-                        <Label Text="{Binding Brand}" Padding="10,0,0,0" FontSize="25"  BackgroundColor="CadetBlue"></Label>
-                        <Label Text="{Binding Model}" Padding="10,0,0,0" FontSize="14" BackgroundColor="Aquamarine"></Label>
+                        <Label Text="{Binding Brand}" Padding="10,0,0,0" FontSize="25"  Style="{DynamicResource BaseLabel}"></Label>
+                        <Label Text="{Binding Model}" Padding="10,0,0,0" FontSize="14" Style="{DynamicResource BaseLabel}"></Label>
                     </StackLayout>
-                    <Label  HorizontalOptions="EndAndExpand" FontSize="33" Text="{Binding Price, StringFormat='{0:C}'}" VerticalTextAlignment="Center" Padding="10,0,0,0" BackgroundColor="Coral"></Label>
+                    <Label  HorizontalOptions="EndAndExpand" FontSize="33" Text="{Binding Price, StringFormat='{0:C}'}" VerticalTextAlignment="Center" Padding="10,0,0,0" Style="{DynamicResource BaseLabel}"></Label>
                 </StackLayout>
-                <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" BackgroundColor="DarkKhaki" Padding="0">
-                    <Label Text="{Binding Transmission, StringFormat='Transmission: {0}'}" FontSize="16" HorizontalOptions="StartAndExpand" BackgroundColor="GreenYellow" Padding="10,0,0,0"></Label>
-                    <Label Text="{Binding BuildYear, StringFormat='BouwJaar: {0}'}" BackgroundColor="CadetBlue" Padding="10,0,0,0" FontSize="12" HorizontalOptions="CenterAndExpand"></Label>
-                    <Label Text="{Binding Power, StringFormat='{0} PK'}" BackgroundColor="Brown" Padding="10,0,0,0" HorizontalOptions="EndAndExpand"></Label>
+                <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" Style="{DynamicResource Stack}" Padding="0">
+                    <Label Text="{Binding Transmission, StringFormat='Transmission: {0}'}" FontSize="16" HorizontalOptions="StartAndExpand" Style="{DynamicResource BaseLabel}" Padding="10,0,0,0"></Label>
+                    <Label Text="{Binding BuildYear, StringFormat='BouwJaar: {0}'}" Style="{DynamicResource BaseLabel}" Padding="10,0,0,0" FontSize="12" HorizontalOptions="CenterAndExpand"></Label>
+                    <Label Text="{Binding Power, StringFormat='{0} PK'}"  Padding="10,0,0,0" Style="{DynamicResource BaseLabel}" HorizontalOptions="EndAndExpand"></Label>
 
                 </StackLayout>
                 <StackLayout Orientation="Horizontal" BackgroundColor="Gainsboro">
-                    <Label Text="{Binding BodyType, StringFormat='BodyType: {0}'}" FontSize="18" BackgroundColor="HotPink" Padding="10,0,0,0"></Label>
-                    <Label Text="{Binding FuelType, StringFormat='Brandstof: {0}'}" FontSize="18" BackgroundColor="Indigo" Padding="10,0,0,0"></Label>
+                    <Label Text="{Binding BodyType, StringFormat='BodyType: {0}'}" FontSize="18" Style="{DynamicResource BaseLabel}" Padding="10,0,0,0"></Label>
+                    <Label Text="{Binding FuelType, StringFormat='Brandstof: {0}'}" FontSize="18" Style="{DynamicResource BaseLabel}" Padding="10,0,0,0"></Label>
                 </StackLayout>
 
                 <ScrollView HeightRequest="200" Margin="0,10,0,10">
-                    <Label Text="{Binding Description}" HorizontalOptions="FillAndExpand" BackgroundColor="Lime" Padding="10,0,0,0"></Label>
+                    <Label Text="{Binding Description}" HorizontalOptions="FillAndExpand" Style="{DynamicResource LabelMedium}" Padding="10,0,0,0"></Label>
                 </ScrollView>
 
                 <!--<Button x:Name="OpenMaps" Text="Show Location" Clicked="OpenMaps_Clicked"></Button>-->

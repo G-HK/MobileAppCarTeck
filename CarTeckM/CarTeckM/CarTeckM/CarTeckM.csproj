@@ -16,6 +16,7 @@
     <PackageReference Include="MonkeyCache.FileStore" Version="1.5.2" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
     <PackageReference Include="Plugin.Toast" Version="2.2.0" />
+    <PackageReference Include="Refractored.MvvmHelpers" Version="1.6.2" />
     <PackageReference Include="Rg.Plugins.Popup" Version="2.0.0.12" />
     <PackageReference Include="sqlite-net-pcl" Version="1.7.335" />
     <PackageReference Include="System.Collections" Version="4.3.0" />
@@ -36,6 +37,9 @@
     <Compile Update="Account\RegistrationPage.xaml.cs">
       <DependentUpon>RegistrationPage.xaml</DependentUpon>
     </Compile>
+    <Compile Update="Car\UserCarListpage.xaml.cs">
+      <DependentUpon>UserCarListpage.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
 
   <ItemGroup>
@@ -52,6 +56,9 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Car\CarPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Car\UserCarListpage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Car\SearchCar.xaml">

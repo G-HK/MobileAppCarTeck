@@ -15,6 +15,7 @@
           "NETStandard.Library": "2.0.3",
           "Newtonsoft.Json": "13.0.1",
           "Plugin.Toast": "2.2.0",
+          "Refractored.MvvmHelpers": "1.6.2",
           "Rg.Plugins.Popup": "2.0.0.12",
           "System.Collections": "4.3.0",
           "Xam.Plugin.Media": "5.0.1",
@@ -186,6 +187,17 @@
           }
         }
       },
+      "Refractored.MvvmHelpers/1.6.2": {
+        "dependencies": {
+          "System.ValueTuple": "4.5.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/MvvmHelpers.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
       "Rg.Plugins.Popup/2.0.0.12": {
         "dependencies": {
           "Xamarin.Forms": "5.0.0.2012"
@@ -310,6 +322,7 @@
           }
         }
       },
+      "System.ValueTuple/4.5.0": {},
       "Xam.Plugin.Media/5.0.1": {
         "dependencies": {
           "Xamarin.Essentials": "1.7.0"
@@ -514,6 +527,13 @@
       "path": "plugin.toast/2.2.0",
       "hashPath": "plugin.toast.2.2.0.nupkg.sha512"
     },
+    "Refractored.MvvmHelpers/1.6.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-pXiyT0ad3QI7IzZSSjVNliyhyyAe7lmNPdfAEgSrtjhF9twrYoKbBlTd58IJc67Fw8QmHEur8F9eBA4rj+BZAg==",
+      "path": "refractored.mvvmhelpers/1.6.2",
+      "hashPath": "refractored.mvvmhelpers.1.6.2.nupkg.sha512"
+    },
     "Rg.Plugins.Popup/2.0.0.12": {
       "type": "package",
       "serviceable": true,
@@ -611,6 +631,13 @@
       "sha512": "sha512-Xg4G4Indi4dqP1iuAiMSwpiWS54ZghzR644OtsRCm/m/lBMG8dUBhLVN7hLm8NNrNTR+iGbshCPTwrvxZPlm4g==",
       "path": "system.text.encodings.web/4.5.0",
       "hashPath": "system.text.encodings.web.4.5.0.nupkg.sha512"
+    },
+    "System.ValueTuple/4.5.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-okurQJO6NRE/apDIP23ajJ0hpiNmJ+f0BwOlB/cSqTLQlw5upkf+5+96+iG2Jw40G1fCVCyPz/FhIABUjMR+RQ==",
+      "path": "system.valuetuple/4.5.0",
+      "hashPath": "system.valuetuple.4.5.0.nupkg.sha512"
     },
     "Xam.Plugin.Media/5.0.1": {
       "type": "package",

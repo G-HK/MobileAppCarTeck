@@ -62,3 +62,4 @@ C:\Users\h_kad\Documents\GitHub\MobileAppCarTeck\CarTeckM\CarTeckM\CarTeckM\obj\
 C:\Users\h_kad\Documents\GitHub\MobileAppCarTeck\CarTeckM\CarTeckM\CarTeckM\obj\Debug\netstandard2.0\ref\CarTeckM.dll
 C:\Users\h_kad\Documents\GitHub\MobileAppCarTeck\CarTeckM\CarTeckM\CarTeckM\obj\Debug\netstandard2.0\CarTeckM.pdb
 C:\Users\h_kad\Documents\GitHub\MobileAppCarTeck\CarTeckM\CarTeckM\CarTeckM\obj\Debug\netstandard2.0\CarTeckM.csproj.AssemblyReference.cache
+C:\Users\h_kad\Documents\GitHub\MobileAppCarTeck\CarTeckM\CarTeckM\CarTeckM\obj\Debug\netstandard2.0\Car\UserCarListpage.xaml.g.cs

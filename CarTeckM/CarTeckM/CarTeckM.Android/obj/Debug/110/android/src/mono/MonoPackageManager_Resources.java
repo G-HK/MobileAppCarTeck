@@ -16,6 +16,7 @@ public class MonoPackageManager_Resources {
 		"Microsoft.Net.Http.Headers.dll",
 		"MonkeyCache.dll",
 		"MonkeyCache.FileStore.dll",
+		"MvvmHelpers.dll",
 		"NativeMedia.dll",
 		"Newtonsoft.Json.dll",
 		"Plugin.Media.dll",

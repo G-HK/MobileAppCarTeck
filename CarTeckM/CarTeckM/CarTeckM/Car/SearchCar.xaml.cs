@@ -1,4 +1,6 @@
 ﻿using Android.Content.Res;
+using CarTeckM.Data;
+using CarTeckM.Models;
 using System;
 using System.Collections.Generic;
 using System.Globalization;
@@ -30,7 +32,7 @@ namespace CarTeckM.Car
                 text = reader.ReadToEnd().Split(',');
             }
 
-            ListMerk.ItemsSource = text.ToList();
+            ListBrand.ItemsSource = text.ToList();
 
 
 
@@ -42,7 +44,7 @@ namespace CarTeckM.Car
             FuelPicker.SelectedIndex = 0;
             GearBoxPicker.SelectedIndex = 0;
             PkrBodyType.SelectedIndex = 0;
-            ListMerk.SelectedIndex = 0;
+            ListBrand.SelectedIndex = 0;
         }
 
         private void BeginPrice_PropertyChanged(object sender, System.ComponentModel.PropertyChangedEventArgs e)
@@ -72,7 +74,37 @@ namespace CarTeckM.Car
         {
 
 
-            await this.Navigation.PushAsync(new CarPage());
+            FilterCars filterCar = new FilterCars();
+
+            // 
+                filterCar.Brand = ListBrand.SelectedItem.ToString().Replace("\r\n", string.Empty);
+            // Model = modelEntry.Text;
+            filterCar.Transmission = GearBoxPicker.SelectedItem.ToString();
+            filterCar.BodyType = PkrBodyType.SelectedItem.ToString();
+            filterCar.LowerPrice = Convert.ToDecimal(sliderPrice.LowerValue);
+            filterCar.UpperPrice = Convert.ToDecimal(sliderPrice.UpperValue);
+            filterCar.BeginBuildYear = int.Parse(BeginYearList.SelectedIndex.ToString());
+            filterCar.EndBuildYear = int.Parse(EndYearList.SelectedIndex.ToString());
+            filterCar.RangeType = "KM";
+            filterCar.LowerRange = int.Parse(RangeLowerLimit.Text);
+            filterCar.UpperRange = int.Parse(RangeUpperLimit.Text);
+            filterCar.Torque = "600";
+            filterCar.LowerPower = PkLowerEntry.Text;
+            filterCar.UpperPower = PkUpperEntry.Text;
+            filterCar.FuelType = FuelPicker.SelectedItem.ToString();
+            
+
+
+
+
+
+
+            //await DisplayAlert("ErrorFilter", $"{filterCar}", "OK");
+
+            await Navigation.PushAsync(new CarPage(filterCar));
+
+
+
         }
 
 

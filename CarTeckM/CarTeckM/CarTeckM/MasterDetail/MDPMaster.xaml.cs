@@ -29,14 +29,19 @@ namespace CarTeckM.MasterDetail
             ListView = MenuItemsListView;
 
             UserDto userDto = new UserDto();
-           // UserNamelbl.Text = BindableProperty.
 
-            
+            // Set the master-part
+           
+
+            // UserNamelbl.Text = BindableProperty.
+
+
         }
 
         class MDPMasterViewModel : INotifyPropertyChanged
         {
             public ObservableCollection<MDPMasterMenuItem> MenuItems { get; set; }
+          //  public ObservableCollection<MDPMasterMenuItem> MenuItems { get; set; }
 
             public MDPMasterViewModel()
             {

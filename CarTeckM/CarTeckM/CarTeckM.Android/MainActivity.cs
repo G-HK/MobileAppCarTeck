@@ -13,9 +13,11 @@ using CarTeckM.Services;
 using CarTeckM.Droid;
 using System.IO;
 using Android.Content;
+using CarTeckM.Data;
 
 [assembly: Dependency(typeof(Toaster))]
 [assembly: Dependency(typeof(CarTeckM.Droid.Environment))]
+[assembly: Dependency(typeof(CarTeckM.Data.CRTKDatabase))]
 //[assembly: Dependency(typeof(CarTeckM.Droid.FileService))]
 
 namespace CarTeckM.Droid
@@ -28,10 +30,16 @@ namespace CarTeckM.Droid
             TabLayoutResource = Resource.Layout.Tabbar;
             ToolbarResource = Resource.Layout.Toolbar;
 
+
+            Xamarin.Forms.DependencyService.Register<ICRTKDatabase>();
+
+
             base.OnCreate(savedInstanceState);
 
             NativeMedia.Platform.Init(this, savedInstanceState);
 
+
+            
 
             //Plugins
             Rg.Plugins.Popup.Popup.Init(this);

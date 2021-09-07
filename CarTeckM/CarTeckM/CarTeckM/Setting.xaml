@@ -159,15 +159,4 @@
                 </StackLayout>
             </Grid>
         </ScrollView>
-
-
-        <!--<TableView>
-            <TableRoot>
-                <TableSection Title="Mode">
-                    <SwitchCell Text="DarkMode"/>
-                    <SwitchCell Text="Test" />
-                </TableSection>
-            </TableRoot>
-        </TableView>-->
-    <!--</ContentPage.Content>-->
 </ContentPage>

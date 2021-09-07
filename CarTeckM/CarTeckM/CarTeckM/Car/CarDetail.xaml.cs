@@ -14,17 +14,15 @@ namespace CarTeckM.Car
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class CarDetail : ContentPage
     {
-        private CarDto _carSelect;
+        private Data.Car _carSelect;
 
-        public CarDetail(CarDto CarID) //testing 
+        public CarDetail(Data.Car CarID) //testing 
         {
             InitializeComponent();
 
             // api call or sql Lite with carID
             _carSelect = CarID;
-            this.BindingContext = CarID;
-
-           
+            this.BindingContext = CarID;           
 
 
             //List<ImageCell> imageSources = new List<ImageCell>();

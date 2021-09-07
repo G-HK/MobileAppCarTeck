@@ -68,6 +68,20 @@
                 <Setter Property="TextColor" 
                         Value="{AppThemeBinding Dark={StaticResource TextColorDark},
                     Light={StaticResource TextColor}}" />
+            </Style>  
+            
+            <Style x:Key="CarPageLabel" TargetType="Label">
+                <Setter Property="TextColor" 
+                        Value="{AppThemeBinding Dark={StaticResource TextColorDark},
+                    Light={StaticResource TextColor}}" />
+                <Setter Property="Background"
+                         Value="{AppThemeBinding Dark={StaticResource WindowBackgroundColorDark},
+                    Light={StaticResource SystemRedDark}}" />
+
+                
+                
+
+
             </Style>
             
             
@@ -75,6 +89,7 @@
             <Style x:Key="LabelMicro" TargetType="Label" BasedOn="{StaticResource BaseLabel}">
                 <Setter Property="FontSize" Value="Micro"/>
             </Style>
+            
             <Style x:Key="LabelSmall" TargetType="Label" BasedOn="{StaticResource BaseLabel}">
                 <Setter Property="FontSize" Value="Small"/>
             </Style>
