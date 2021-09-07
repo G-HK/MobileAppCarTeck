@@ -71,7 +71,7 @@
                             <Picker.Items>
                                 <x:String>Any</x:String>
                                 <x:String>Diesel</x:String>
-                                <x:String>Benzin</x:String>
+                                <x:String>Benzine</x:String>
                                 <x:String>Elektrisch</x:String>
                                 <x:String>LPG</x:String>
                                 <x:String>CNG</x:String>

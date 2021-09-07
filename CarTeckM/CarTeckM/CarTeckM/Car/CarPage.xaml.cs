@@ -54,7 +54,7 @@ namespace CarTeckM.Car
             //var listc = new IEnumerable<Car>();
 
 
-            if (FilterCars == null)
+            if (FilterCars.Brand == "Any")
             {
                 var listc = await cRTKDatabase.GetCars();
                 CarListElement.ItemsSource = listc;
@@ -67,9 +67,6 @@ namespace CarTeckM.Car
             }
 
             //var listc = await cRTKDatabase.GetCars();
-
-
-
 
 
             //    CarListElement.ItemsSource = new List<Data.Car>
@@ -140,14 +137,19 @@ namespace CarTeckM.Car
             await Task.Delay(3000);
             myRefreshViewCar.IsRefreshing = false;
 
+            List<Data.Car> lst = new List<Data.Car>();
+            lst.Clear();
+
+
+            CarListElement.ItemsSource = lst;
+
             var cRTKDatabase = DependencyService.Get<CRTKDatabase>();
 
             var listc = await cRTKDatabase.GetCars();
 
-            CarListElement.ItemsSource = null;
-
             CarListElement.ItemsSource = listc;
 
+            
 
         }
     }

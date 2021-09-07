@@ -41,7 +41,7 @@ namespace CarTeckM.Data
         public async void seeddata()
         {
 
-            await database.DeleteAllAsync<Car>();
+            //await database.DeleteAllAsync<Car>();
 
 
             Car car1 = new Car
@@ -49,7 +49,7 @@ namespace CarTeckM.Data
                 CarID = 1,
                 Brand = "BMW",
                 Model = "M3",
-                Transmission = "Manuel",
+                Transmission = "Manual",
                 BodyType = "Berline",
                 BuildYear = 2021,
                 RangeType = "KM",
@@ -69,7 +69,7 @@ namespace CarTeckM.Data
                 Picture =  "BMW1.png",
                 Color = "Black",
                 FuelType = "Benzine",
-                UserID = "1",
+                UserID = 1,
                 Currency = "€",
 
             };
@@ -78,8 +78,8 @@ namespace CarTeckM.Data
             {
                 CarID = 2,
                 Brand = "Porsche",
-                Model = "911 995",
-                Transmission = "Manuel",
+                Model = "911 Turbo s",
+                Transmission = "Manual",
                 BodyType = "Coupé",
                 BuildYear = 2020,
                 RangeType = "mil",
@@ -89,10 +89,32 @@ namespace CarTeckM.Data
                 Currency = "$",
                 Price = 99999,
                 Description = "A Car for Enthusiast.",
-                Picture =  "BMW6.png" ,
+                Picture = "porsche911turbos.png",
                 FuelType = "Diesel",
-                UserID = "2",
+                UserID = 2,
                 Color = "Metalic Black"
+
+
+            };
+            Car car3 = new Car
+            {
+                CarID = 3,
+                Brand = "Porsche",
+                Model = "911 995",
+                Transmission = "Manual",
+                BodyType = "Coupé",
+                BuildYear = 1969,
+                RangeType = "km",
+                Range = 30000,
+                Torque = "400",
+                Power = 350,
+                Currency = "$",
+                Price = 99999,
+                Description = "A Car for Enthusiast.",
+                Picture = "porsche911992.jpg",
+                FuelType = "Benzine",
+                UserID = 1,
+                Color = "Green"
 
 
             };
@@ -100,6 +122,7 @@ namespace CarTeckM.Data
 
             await AddCar(car1);
             await AddCar(car2);
+            await AddCar(car3);
         }
 
         public async Task AddCar(Car car)
@@ -146,6 +169,7 @@ namespace CarTeckM.Data
         {
             await Init();
 
+
             var car = await database.Table<Car>().Where(c => 
                 c.Brand == filter.Brand 
                 &&
@@ -160,6 +184,14 @@ namespace CarTeckM.Data
 
 
 
+            return car;
+        }
+
+        public async Task<IEnumerable<Car>> GetUserCars(int  userID)
+        {
+            await Init();
+
+            var car = await database.Table<Car>().Where(x=> x.UserID == userID).ToListAsync();
             return car;
         }
     }

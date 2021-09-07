@@ -18,7 +18,7 @@ namespace CarTeckAPI.Services
 
         public IEnumerable<User> GetUsers()
         {
-            return _context.Users.OrderBy(c => c.UserName).ToList();
+            return _context.Users.OrderBy(c => c.Username).ToList();
         }
 
         public User GetUser(string email, string Password)
@@ -51,7 +51,7 @@ namespace CarTeckAPI.Services
 
         public bool ValidUsername(string username)
         {
-            var userValid = _context.Users.FirstOrDefault(u => u.UserName == username);
+            var userValid = _context.Users.FirstOrDefault(u => u.Username == username);
             if (userValid == null)
             {
                 return true;
@@ -69,10 +69,14 @@ namespace CarTeckAPI.Services
             return false;
 
         }
-        public void CreateUser(User user)
+        public User CreateUser(User user)
         {
             _context.Users.Add(user);
+            
             save();
+
+            return _context.Users.FirstOrDefault(i => i.Email == user.Email);
+
         }
 
         public void DeleteUser(User user)

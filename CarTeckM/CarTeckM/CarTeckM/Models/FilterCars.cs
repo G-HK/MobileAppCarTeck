@@ -1,10 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Text;
 
 namespace CarTeckM.Models
 {
-    public  class FilterCars
+    public  class FilterCars : INotifyPropertyChanged
     {
         public string Brand { get; set; }
         public string Model { get; set; }
@@ -35,6 +36,6 @@ namespace CarTeckM.Models
         public string UpperPower { get; set; } // Kw/Pk
         public string LowerPower { get; set; } = "0";
 
-       
+        public event PropertyChangedEventHandler PropertyChanged;
     }
 }

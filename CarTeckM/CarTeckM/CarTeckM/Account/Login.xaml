@@ -34,7 +34,7 @@
         <Frame CornerRadius="50" BackgroundColor="Beige" x:Name="FrameEmail" BorderColor="Gray" Padding="10,0" Margin="15">
             <StackLayout Orientation="Horizontal" >
                 <Image Source="iconUser20.png"  WidthRequest="30" />
-                <Entry x:Name="EmailEtry" Placeholder="{Binding Email}" Text="{Binding Email,TargetNullValue='test@user.be'}" Keyboard="Email" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand" Margin="5,0,0,0"/>
+                <Entry x:Name="EmailEtry" Placeholder="{Binding Email}" Text="{Binding Email,TargetNullValue='test@user.be'}" Keyboard="Email" Completed="Email_Completed" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand" Margin="5,0,0,0"/>
             </StackLayout>
         </Frame>
 
@@ -42,7 +42,7 @@
         <Frame CornerRadius="50" BackgroundColor="Beige" x:Name="FramePsw" BorderColor="Gray"  Padding="8,0" Margin="15">
             <StackLayout Orientation="Horizontal">
                 <Image Source="keyPsw.png" WidthRequest="30" />
-                <Entry  x:Name="PswEntry" Placeholder="Password" Text="{Binding Password, TargetNullValue='test'}" IsPassword="True"  HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand" />
+                <Entry  x:Name="PswEntry" Placeholder="Password" Text="{Binding Password, TargetNullValue='test'}" IsPassword="True" Completed="PswEntry_Completed" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand" />
                 <ImageButton Source="test.png" x:Name="IbtnEye" Clicked="IbtnEye_Clicked"  WidthRequest="22" BackgroundColor="Transparent"/>
             </StackLayout>
         </Frame>
@@ -52,7 +52,7 @@
             <Label>stay login.</Label>
         </StackLayout>
 
-        <Button Text="Login" x:Name="btnLogin" BackgroundColor="Transparent" FontAttributes="Italic,Bold" FontSize="22" HorizontalOptions="Center" Clicked="btnLogin_Clicked" ></Button>
+        <Button Text="Login" x:Name="btnLogin" IsEnabled="False" BackgroundColor="Transparent" FontAttributes="Italic,Bold" FontSize="22" HorizontalOptions="Center" Clicked="btnLogin_Clicked" ></Button>
 
     </StackLayout>
 

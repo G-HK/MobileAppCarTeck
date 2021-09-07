@@ -11,7 +11,7 @@ namespace CarTeckAPI.Models
         [Key]
         public int UserID { get; set; }
         [Required]
-        public string UserName { get; set; }
+        public string Username { get; set; }
         [Required]
         [EmailAddress]
         public string Email { get; set; }

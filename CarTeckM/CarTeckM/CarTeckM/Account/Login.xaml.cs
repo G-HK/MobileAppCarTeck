@@ -1,4 +1,5 @@
 ﻿using Android.Content;
+using CarTeckM.Data;
 using CarTeckM.Models;
 using Newtonsoft.Json;
 using Rg.Plugins.Popup.Pages;
@@ -66,24 +67,29 @@ namespace CarTeckM.Account
 
         private async void btnLogin_Clicked(object sender, EventArgs e)
         {
-            UserDto usr = connect.GetUser(EmailEtry.Text, PswEntry.Text);
+            User usr = connect.GetUser(EmailEtry.Text, PswEntry.Text);
 
             if (usr != null)
             {
-                Preferences.Set("UserOb", JsonConvert.SerializeObject(usr));
-                UserDto userView = new UserDto();
-                userView.Username = usr.Username;
-                userView.Email = usr.Email;
-                userView.Password = usr.Password;
-                userView.ID = usr.ID;
+                Preferences.Set("Userinfo", JsonConvert.SerializeObject(usr));
+
+
+
+                //UserDto userView = new UserDto();
+                //userView.Username = usr.Username;
+                //userView.Email = usr.Email;
+                //userView.Password = usr.Password;
+                //userView.UserID = usr.UserID;
 
                 //MdiPageMasterViewModel md = new MdiPageMasterViewModel();
                 //md.NameUser = usr.UserName;
 
                 Preferences.Set("loginValid", true);
 
-                // var user= JsonConvert.DeserializeObject<User>(Preferences.Get(UserKey, "default_value");
+                // var user= JsonConvert.DeserializeObject<UserDto>(Preferences.Get("Userinfo",string.Empty));
                 Accelerometer.Stop();
+                
+
                 await PopupNavigation.Instance.PopAsync(true);
 
                 //save user
@@ -117,35 +123,36 @@ namespace CarTeckM.Account
 
 
         //not required
-        //private void Email_Completed(object sender, EventArgs e)
-        //{
-        //    Entry entry = sender as Entry;
-        //    // connect.ValidUser(entry.Text);
-        //    if (!connect.ValidEmail(entry.Text))
-        //    {
-        //        FrameEmail.BackgroundColor = Color.FromHex("#97F382");
-        //        InValidLbl.IsVisible = false;
-        //    }
-        //    else
-        //    {
-        //        InValidLbl.IsVisible = true;
-        //    }
+        private void Email_Completed(object sender, EventArgs e)
+        {
+            Entry entry = sender as Entry;
+            // connect.ValidUser(entry.Text);
+            if (!connect.ValidEmail(entry.Text))
+            {
+                FrameEmail.BackgroundColor = Color.FromHex("#97F382");
+                InValidLbl.IsVisible = false;
+            }
+            else
+            {
+                InValidLbl.IsVisible = true;
+            }
 
-        //}
+        }
 
-        //private void PswEntry_Completed(object sender, EventArgs e)
-        //{
-        //    Entry ps = sender as Entry;
-        //    string email = EmailEtry.Text;
-        //    if (connect.ValidPsw(email, ps.Text))
-        //    {
-        //        FramePsw.BackgroundColor = Color.FromHex("#97F382");
-        //        alertPsw.IsVisible = false;
-        //    }
-        //    else
-        //    {
-        //        alertPsw.IsVisible = true;
-        //    }
-        //}
+        private void PswEntry_Completed(object sender, EventArgs e)
+        {
+            Entry ps = sender as Entry;
+            string email = EmailEtry.Text;
+            if (connect.ValidPsw(email, ps.Text))
+            {
+                FramePsw.BackgroundColor = Color.FromHex("#97F382");
+                alertPsw.IsVisible = false;
+                btnLogin.IsEnabled = true;
+            }
+            else
+            {
+                alertPsw.IsVisible = true;
+            }
+        }
     }
 }

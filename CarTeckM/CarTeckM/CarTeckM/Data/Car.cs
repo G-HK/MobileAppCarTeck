@@ -56,7 +56,7 @@ namespace CarTeckM.Data
         public string Picture { get; set; }
 
         [Indexed]
-        public string UserID { get; set; }
+        public int UserID { get; set; }
         // id of the car onwer or Dealer.
         //public User User { get; set; }
 

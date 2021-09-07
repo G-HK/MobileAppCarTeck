@@ -24,14 +24,14 @@ namespace CarTeckAPI.Data
                context.Users.AddRange(
                new User
                {
-                   UserName = "Gk",
+                   Username = "Gk",
                    Email = "test@user.be",
                    Password = "test",
                    BirthDate = new DateTime(1996, 12, 22)
                },
                 new User
                 {
-                    UserName = "alfa",
+                    Username = "alfa",
                     Email = "alfa@user.be",
                     Password = "test123",
                     BirthDate = new DateTime(1996, 12, 22)

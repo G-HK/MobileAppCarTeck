@@ -84,9 +84,11 @@ namespace CarTeckAPI.Controllers
         {
             if (ModelState.IsValid)
             {
-                if (_userRepository.ValidEmail(user.Email) && _userRepository.ValidUsername(user.UserName))
+                if (_userRepository.ValidEmail(user.Email) && _userRepository.ValidUsername(user.Username))
                 {
-                    _userRepository.CreateUser(user);
+                   User user1 =  _userRepository.CreateUser(user);
+
+                    return (IActionResult)user1;
                 }
             }
             else

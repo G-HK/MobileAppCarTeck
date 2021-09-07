@@ -48,11 +48,11 @@ namespace CarTeckM.MasterDetail
                 MenuItems = new ObservableCollection<MDPMasterMenuItem>(new[]
                 {
                     new MDPMasterMenuItem { Id = 0, Title = "My Profile" , IconSource="user.png",  TargetType=typeof(ProfilePage) },
-                    new MDPMasterMenuItem { Id = 1, Title = "Saved" , IconSource="save.png" ,  TargetType=typeof(Favorite)},
+                    new MDPMasterMenuItem { Id = 1, Title = "Saved" , IconSource="save.png" ,  TargetType=typeof(UserCarListpage)},
                     new MDPMasterMenuItem { Id = 2, Title =  "SearchCar" , IconSource="search.png" ,  TargetType=typeof(SearchCar) },
                     new MDPMasterMenuItem { Id = 3, Title = "SellCar", IconSource="car.png" ,  TargetType=typeof(SellCar) },
                     new MDPMasterMenuItem { Id = 4, Title = "Setttings", IconSource="settings.png" , TargetType=typeof(Setting)},
-                    new MDPMasterMenuItem { Id = 4, Title = "Carpage", IconSource="car.png" , TargetType=typeof(CarPage)},
+                   // new MDPMasterMenuItem { Id = 5, Title = "Carpage", IconSource="car.png" , TargetType=typeof(CarPage)},
                 });
             }
 

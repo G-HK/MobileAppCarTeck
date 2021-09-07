@@ -1,4 +1,5 @@
 ﻿using CarTeckM.Models;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,10 +14,15 @@ namespace CarTeckM.Account
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class RegistrationPage : ContentPage
     {
+        ApiConnect connect;
+
         public RegistrationPage()
         {
             InitializeComponent();
             BindingContext = new UserDto();
+
+
+            connect = new ApiConnect();
 
             Accelerometer.ShakeDetected += Empty_Lbl;
 
@@ -53,15 +59,30 @@ namespace CarTeckM.Account
 
         private async void Button_Clicked(object sender, EventArgs e)
         {
+
+
+
             await this.Navigation.PopAsync();
         }
 
         private void BtnRegisteren_Clicked(object sender, EventArgs e)
         {
 
+            UserDto userDto = new UserDto
+            {
+                Username = UserEntry.Text,
+                Email= EMailEntry.Text,
+                Password = PswEntry1.Text,
+                BirthDate = BirhtDate.Date
+            };
+
+            var user = connect.PostUser(userDto);
+
+            Preferences.Set("Userinfo", JsonConvert.SerializeObject(user));
+
 
         }
 
-       
+
     }
 }

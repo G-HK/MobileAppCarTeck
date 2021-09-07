@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Net.Http;
 using System.Text;
 using CarTeckM.Models;
+using CarTeckM.Data;
 
 namespace CarTeckM.Models
 {
@@ -15,7 +16,7 @@ namespace CarTeckM.Models
 
         public ApiConnect()
         {
-            httpClient =  new HttpClient { BaseAddress = new Uri("http://cd33-84-193-49-225.ngrok.io ") };//http://10.0.2.2:3866
+            httpClient =  new HttpClient { BaseAddress = new Uri("http://ade5-2a02-1810-c40c-e500-a5c7-f42c-b55e-8787.ngrok.io") };//http://10.0.2.2:3866
             httpClient.DefaultRequestHeaders.Accept.Clear();
             httpClient.DefaultRequestHeaders.Accept.Add(new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));
         //    _mapper = mapper ?? throw new ArgumentNullException(nameof(mapper));
@@ -89,15 +90,28 @@ namespace CarTeckM.Models
         }
 
         //GetUser Get;
-        public UserDto GetUser(string email,  string psw)
+        public User GetUser(string email,  string psw)
         {
             string url = $"Api/Account/Email/{email}/Psw/{psw}";
-            UserDto user = JsonConvert.DeserializeObject<UserDto>(HttpRequestGet(url).ToString());
-           
+           // var user = JsonConvert.DeserializeObject(HttpRequestGet(url).ToString()); 
+            User ise = JsonConvert.DeserializeObject<User>(HttpRequestGet(url).ToString());
+            UserDto dto = new UserDto();
 
-           // var test = _mapper.Map(user,checker);
+
+            dto._userID = ise.UserID;
+
+            dto._username = ise.Username;
+
+            dto._email = ise.Email ?? throw new ArgumentNullException(nameof(ise.Email));
+            dto._password = ise.Password;
+            dto._birthDate = ise.BirthDate;
+
+
+
+
+            // var test = _mapper.Map(user,checker);
             //user.UserID = checker.UserID;
-            return user;
+            return ise;
         }
 
         // PostUser Created

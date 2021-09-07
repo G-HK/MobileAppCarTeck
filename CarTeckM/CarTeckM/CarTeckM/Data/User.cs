@@ -7,24 +7,18 @@ namespace CarTeckM.Data
 {
     public class User
     {
-        public string ID { get; set; }
-
-        [Required(ErrorMessage = "You should provide a Username value.")]
-        [MaxLength(20)]
-
-
-
-        public string UserName { get; set; }
-
-        [Required(ErrorMessage = "You should provide a Email value.")]
+        [Key]
+        public int UserID { get; set; }
+        [Required]
+        public string Username { get; set; }
+        [Required]
         [EmailAddress]
         public string Email { get; set; }
-
-        [Required(ErrorMessage = "You should provide a Password value.")]
+        [Required]
         public string Password { get; set; }
-
-        [DataType(DataType.DateTime)]
+        [Required]
         public DateTime BirthDate { get; set; }
+
 
     }
 }

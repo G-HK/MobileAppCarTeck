@@ -15,7 +15,7 @@ namespace CarTeckAPI.Services
         bool ValidEmail(string Emai);
         bool CheckPsw(string Email, string psw);
         bool UserExists(int id);
-        void CreateUser(User user);
+        User CreateUser(User user);
         void UpdateUser(User user);
         void DeleteUser(User user);
         bool save();

@@ -100,7 +100,7 @@ namespace CarTeckM.Car
                 Picture = "BMW1.png",
                 Color = ColorEntry.Text,
                 FuelType = FuelPicker.SelectedItem.ToString(),
-                UserID = "1",
+                UserID = 1,
                 Currency = "€",
 
             };
@@ -111,8 +111,8 @@ namespace CarTeckM.Car
 
             //await Shell.Current.GoToAsync($"//{nameof(CarPage)}");
 
-            var mdp = Application.Current.MainPage as MasterDetailPage;
-            await mdp.Navigation.PushAsync( new  CarPage(new FilterCars()));
+            //var mdp = Application.Current.MainPage as MasterDetailPage;
+            await this.Navigation.PushAsync(new SearchCar());
 
            // await Navigation.PushAsync(new CarPage());
 

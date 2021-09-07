@@ -10,11 +10,20 @@ namespace CarTeckM.Models
     {
         public event PropertyChangedEventHandler PropertyChanged;
 
-   
-        public string ID { get; set; }
 
-        [Required(ErrorMessage = "You should provide a Username value.")]
-        [MaxLength(20)]
+        public int _userID;
+
+
+
+        public int UserID
+        {
+            get => _userID;
+            set
+            {
+                _userID = value;
+                PropertyChanged.Invoke(this, new PropertyChangedEventArgs(nameof(UserID)));
+            }
+        }
 
 
 
@@ -33,8 +42,8 @@ namespace CarTeckM.Models
 
 
 
-       //
-        private string _email;
+        //
+        public string _email;
 
         [Required(ErrorMessage = "You should provide a Email value.")]
         [EmailAddress]
@@ -49,7 +58,7 @@ namespace CarTeckM.Models
         }
         //
 
-        private string _password;
+        public string _password;
 
         [Required(ErrorMessage = "You should provide a Password value.")]
         public string Password
@@ -66,12 +75,12 @@ namespace CarTeckM.Models
         [DataType(DataType.DateTime)]
         public DateTime _birthDate;
 
-        public string BirthDate
+        public DateTime BirthDate
         {
-            get => _password;
+            get => _birthDate;
             set
             {
-                _password = value;
+                _birthDate = value;
                 PropertyChanged.Invoke(this, new PropertyChangedEventArgs(nameof(BirthDate)));
             }
         }

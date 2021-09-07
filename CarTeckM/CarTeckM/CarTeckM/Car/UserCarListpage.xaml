@@ -1,12 +1,25 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="CarTeckM.Car.UserCarListpage">
+             x:Class="CarTeckM.Car.UserCarListpage"
+              xmlns:Models="clr-namespace:CarTeckM.Data"
+             x:DataType="Models:Car">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
+        <ListView  x:Name="listView">
+            <ListView.ItemTemplate>
+                <DataTemplate x:DataType="Models:Car">
+                    <ViewCell Height="80">
+                        <StackLayout BackgroundColor="#eee"
+                        Orientation="Vertical">
+                            <StackLayout Orientation="Horizontal">
+                                <Image Source="{Binding Picture}" HeightRequest="50" />
+                                <Label Text="{Binding Brand}" TextColor="#f35e20" />
+                                <Label Text="{Binding Price , StringFormat='€ {0}'}" HorizontalOptions="EndAndExpand" TextColor="#503026" />
+                            </StackLayout>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
     </ContentPage.Content>
 </ContentPage>

@@ -3,15 +3,14 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="CarTeckM.Account.ProfilePage"
               xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
-             
+             xmlns:models="clr-namespace:CarTeckM.Models"
+                 x:DataType="models:UserDto"
              BackgroundColor="{AppThemeBinding 
                         Dark={StaticResource WindowBackgroundColorDark}, 
                         Light={StaticResource WindowBackgroundColor}}"
              
              >
     <ContentPage.Content>
-        <RefreshView IsRefreshing="{Binding IsRefreshing}" RefreshColor="Blue"
-             Command="{Binding RefreshCommand}">
         <ScrollView>
             <StackLayout
                 
@@ -29,12 +28,12 @@
 
                     <StackLayout Orientation="Horizontal" Margin="5,10">
                         <Label Text="UserName :" FontSize="18"  Style="{DynamicResource LabelMedium}"></Label>
-                        <Entry Placeholder="NameUser" x:Name="usernameEntry" Style="{DynamicResource BaseEntry}"   HorizontalTextAlignment="Center" IsEnabled="False"  HorizontalOptions="FillAndExpand" Margin="5,0,0,0" Keyboard="Text" Text="GreatKing"></Entry>
+                        <Entry Placeholder="NameUser" x:Name="usernameEntry" Style="{DynamicResource BaseEntry}"   HorizontalTextAlignment="Center" IsEnabled="False"  HorizontalOptions="FillAndExpand" Margin="5,0,0,0" Keyboard="Text" Text="{Binding Username,Mode=TwoWay, TargetNullValue='GreatKing'} "></Entry>
                 </StackLayout>
 
                 <StackLayout Orientation="Horizontal" Margin="5,10">
                         <Label Text="Email :" FontSize="18"  Style="{DynamicResource LabelMedium}"></Label>
-                        <Entry Placeholder="Email" x:Name="emailEntry" Style="{DynamicResource BaseEntry}"  HorizontalTextAlignment="Center" IsEnabled="False"   HorizontalOptions="FillAndExpand" Margin="5,0,0,0" Keyboard="Email" Text="GK@World.com" ></Entry>
+                        <Entry Placeholder="Email" x:Name="emailEntry" Style="{DynamicResource BaseEntry}"  HorizontalTextAlignment="Center" IsEnabled="False"   HorizontalOptions="FillAndExpand" Margin="5,0,0,0" Keyboard="Email" Text="{Binding Email,Mode=TwoWay, TargetNullValue='GK@World.com'} " ></Entry>
                 </StackLayout>
 
                 <StackLayout Orientation="Horizontal" Margin="5,10">
@@ -44,13 +43,12 @@
 
                 <StackLayout Orientation="Horizontal" Margin="5,10">
                         <Label Text="Password :" FontSize="18"  Style="{DynamicResource LabelMedium}"></Label>
-                        <Entry Placeholder="Password" x:Name="pswEntry" HorizontalTextAlignment="Center" Style="{DynamicResource BaseEntry}" IsEnabled="False"   HorizontalOptions="FillAndExpand" Margin="5,0,0,0" IsPassword="True" Text="helloworld" Keyboard="Text"></Entry>
+                        <Entry Placeholder="Password" x:Name="pswEntry" HorizontalTextAlignment="Center" Style="{DynamicResource BaseEntry}" IsEnabled="False"   HorizontalOptions="FillAndExpand" Margin="5,0,0,0" IsPassword="True" Text="{Binding Password,Mode=TwoWay, TargetNullValue='Helloworld'} " Keyboard="Text"></Entry>
                 </StackLayout>
 
 
             </StackLayout>
         </ScrollView>
 
-        </RefreshView>
     </ContentPage.Content>
 </ContentPage>
